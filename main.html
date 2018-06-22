@@ -2,21 +2,217 @@
 <html>
 <head>
 	<title>Training</title>
-	<script src="common functions.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
-<form>
-  Enter Date:<br>
-  <input type="text" id="userDate" placeholder="dd.mm.yyy" ">
-  <br><br>
-   Enter 2nd Date:<br>
-  <input type="text" id="userDate2" placeholder="dd.mm.yyy" ">
-  <br><br>
-</form> 
-<br><br>
-<button onclick="dateFormatting()">submit</button>
-<br><br>
-<button onclick="dateDifference()">calculating</button>
-<p id="demo"></p>
+	<div class="container-fluid">
+		<div class = "page-header" style="background-color:  #99ff33">
+			<img src="images/maksof.png" class="headerImage">
+			<h1 class="d-inline-block pt-3">
+				MAKSOF
+			</h1>
+		</div>
+		<div class="bold">
+			<h1  class="font-weight-bold">Java Script common Functions</h1>
+			<p>[URL: js.maksof.com]</p>
+			<p>This project contains the common javascript functions mostly used in all the project.</p>
+		</div>
+		<br>
+		<div class="row p-3 m-3">
+			<div class="col-12">
+				<div class="card">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demo"><a>dd/mm/yyyy Formate</a></h2>
+					<div id="demo" class="collapse">
+						<h2 id="op1"></h2>
+						<div class="p-3 m-3"><form>
+							Enter Date:<br>
+							<input type="text" id="userDate" placeholder="dd.mm.yyy" ">
+							<br>
+						</form> 
+						<br>
+						<button type="button" class="btn btn-primary" onclick="dateFormatting()">submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12">
+			<div class="card">
+				<h2 class="card-title" data-toggle="collapse" data-target="#demo2"><a>mm/dd/yyyy Formate</a></h2>
+				<div id="demo2" class="collapse">
+					<h2 id="op2"></h2>
+					<div class="p-3 m-3"><form>
+						Enter Date:<br>
+						<input type="text" id="userDate2" placeholder="dd.mm.yyy" ">
+						<br>
+					</form> 
+					<br>
+					<button type="button" class="btn btn-primary" onclick="dateFormattingMMdd()">submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12">
+		<div class="card">
+			<h2 class="card-title" data-toggle="collapse" data-target="#demo3"><a>dd-mm-yyyy Formate</a></h2>
+			<div id="demo3" class="collapse">
+				<h2 id="op3"></h2>
+				<div class="p-3 m-3"><form>
+					Enter Date:<br>
+					<input type="text" id="userDate3" placeholder="dd.mm.yyy" ">
+					<br>
+				</form> 
+				<br>
+				<button type="button" class="btn btn-primary" onclick="dateFormattingDDmmDash()">submit</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="col-12">
+	<div class="card">
+		<h2 class="card-title" data-toggle="collapse" data-target="#demo4"><a>mm-dd-yyyy Formate</a></h2>
+		<div id="demo4" class="collapse">
+			<h2 id="op4"></h2>
+			<div class="p-3 m-3"><form>
+				Enter Date:<br>
+				<input type="text" id="userDate4" placeholder="dd.mm.yyy" ">
+				<br>
+			</form> 
+			<br>
+			<button type="button" class="btn btn-primary" onclick="dateFormattingMMddDash()">submit</button>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="col-12">
+	<div class="card">
+		<h2 class="card-title" data-toggle="collapse" data-target="#demo5"><a>day-mm-yyyy Formate</a></h2>
+		<div id="demo5" class="collapse">
+			<h2 id="op5"></h2>
+			<div class="p-3 m-3"><form>
+				Enter Date:<br>
+				<input type="text" id="userDate5" placeholder="dd.mm.yyy" ">
+				<br>
+			</form> 
+			<br>
+			<button type="button" class="btn btn-primary" onclick="dateFormattingDayMM()">submit</button>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="col-12">
+	<div class="card">
+		<h2 class="card-title" data-toggle="collapse" data-target="#demo6"><a>dd-month-yyyy Formate</a></h2>
+		<div id="demo6" class="collapse">
+			<h2 id="op6"></h2>
+			<div class="p-3 m-3"><form>
+				Enter Date:<br>
+				<input type="text" id="userDate6" placeholder="dd.mm.yyy" ">
+				<br>
+			</form> 
+			<br>
+			<button type="button" class="btn btn-primary" onclick="dateFormattingMMday()">submit</button>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="col-12">
+	<div class="card">
+		<h2 class="card-title" data-toggle="collapse" data-target="#demo7"><a>day-month-yyyy Formate</a></h2>
+		<div id="demo7" class="collapse">
+			<h2 id="op7"></h2>
+			<div class="p-3 m-3"><form>
+				Enter Date:<br>
+				<input type="text" id="userDate7" placeholder="dd.mm.yyy">
+				<br>
+			</form> 
+			<br>
+			<button type="button" class="btn btn-primary" onclick="dateFormattingDayMonth()">submit</button>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="col-12">
+	<div class="card">
+		<h2 class="card-title" data-toggle="collapse" data-target="#demo8"><a>Calculate Day Difference</a></h2>
+		<div id="demo8" class="collapse">
+			<h2 id="diffOfDate"></h2>
+			<div class="p-3 m-3"><form>
+				Enter Date:<br>
+				<input type="text" id="userDate8" placeholder="dd.mm.yyy">
+				<br>
+				Enter Second Date:<br>
+				<input type="text" id="userDate11" placeholder="dd.mm.yyy">
+				<br>
+			</form> 
+			<br>
+			<button type="button" class="btn btn-primary" onclick="dateDifference()">Calculate</button>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="col-12">
+	<div class="card">
+		<h2 class="card-title" data-toggle="collapse" data-target="#demo9"><a>Calculate Month difference</a></h2>
+		<div id="demo9" class="collapse">
+			<h2 id="diffOfMonth"></h2>
+			<div class="p-3 m-3"><form>
+				Enter Date:<br>
+				<input type="text" id="userDate9" placeholder="dd.mm.yyy">
+				<br>
+				Enter Second Date:<br>
+				<input type="text" id="userDate12" placeholder="dd.mm.yyy">
+				<br>
+			</form> 
+			<br>
+			<button type="button" class="btn btn-primary" onclick="monthlyDiff()">Calculate</button>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="col-12">
+	<div class="card">
+		<h2 class="card-title" data-toggle="collapse" data-target="#demo10"><a>Calculate year Difference</a></h2>
+		<div id="demo10" class="collapse">
+			<h2 id="diffOfYear"></h2>
+			<div class="p-3 m-3"><form>
+				Enter Date:<br>
+				<input type="text" id="userDate10" placeholder="dd.mm.yyy">
+				<br>
+				Enter Second Date:<br>
+				<input type="text" id="userDate13" placeholder="dd.mm.yyy">
+				<br>
+			</form> 
+			<br>
+			<button type="button" class="btn btn-primary" onclick="yearDiff()">Calculate</button>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>
+<script src="common-functions.js"></script>
