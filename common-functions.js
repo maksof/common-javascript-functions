@@ -1,91 +1,91 @@
-var dateArray =[];
-var dateArray2 =[];
-
 function dateFormatSlashDDMM(a) {
-	this.dateArray=a;
-	var output1 = this.dateArray[2]+"/"+this.dateArray[1]+"/"+this.dateArray[0];
-	document.getElementById("op1").innerHTML = output1;
+	var dateArray=a;
+	var output1 = dateArray[2]+"/"+dateArray[1]+"/"+dateArray[0];
+	return output1;
 }
 
 function dateFormatSlashMMDD(a) {
-	this.dateArray=a;
-	var output2 = this.dateArray[1]+"/"+this.dateArray[2]+"/"+this.dateArray[0];
-	document.getElementById("op2").innerHTML = output2;
+	var dateArray=a;
+	var output2 = dateArray[1]+"/"+dateArray[2]+"/"+dateArray[0];
+	return output2;
 }
 
 function dateFormatDashDDMM(a) {
-	this.dateArray=a;
-	var output3 = this.dateArray[2]+"-"+this.dateArray[1]+"-"+this.dateArray[0];
-	document.getElementById("op3").innerHTML = output3;
+	var dateArray=a;
+	var output3 = dateArray[2]+"-"+dateArray[1]+"-"+dateArray[0];
+	return output3;
 }
 
 function dateFormatDashMMDD(a) {
-	this.dateArray=a;
-	var output4 = this.dateArray[1]+"-"+this.dateArray[2]+"-"+this.dateArray[0];
-	document.getElementById("op4").innerHTML = output4;
+	var dateArray=a;
+	var output4 = dateArray[1]+"-"+dateArray[2]+"-"+dateArray[0];
+	return output4;
 }
 
 function monthNameFormatDate(a) {
-	this.dateArray=a;
-	var output5 = this.dateArray[2]+"-"+monthNameWiseFormate(this.dateArray[1])+"-"+this.dateArray[0];
-	document.getElementById("op5").innerHTML = output5;
+	var dateArray=a;
+	var output5 = dateArray[2]+"-"+monthNameWiseFormate(dateArray[1])+"-"+dateArray[0];
+	return output5;
 }
 
 function monthNameFormatDateMMDD(a) {
-	var output6 = monthNameWiseFormate(this.dateArray[1])+"-"+this.dateArray[2]+"-"+this.dateArray[0];
-	document.getElementById("op6").innerHTML = output6;
+	var dateArray=a;
+	var output6 = monthNameWiseFormate(dateArray[1])+"-"+dateArray[2]+"-"+dateArray[0];
+	return output6;
 }
 
 function dayMonthNameFormatDate(a) {
-	var output7 = dateFormat(this.dateArray[2])+" "+monthNameWiseFormate(this.dateArray[1])+" "+this.dateArray[0];
-	document.getElementById("op7").innerHTML = output7;
+	var dateArray=a;
+	var output7 = dateFormat(dateArray[2])+" "+monthNameWiseFormate(dateArray[1])+" "+dateArray[0];
+	return output7;
 }
 
 function dayNameMonthNameFormatDate(a) {
 	var getdate=a;
-	this.dateArray = getdate.split('-');
+	var dateArray=a;
+	dateArray = getdate.split('-');
 	var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 	var d = new Date(getdate);
 	var dayName = days[d.getDay()];
-	var tem=this.dateArray[2];
-	var output14 = dayName+", "+dateFormat(tem)+" "+monthNameWiseFormate(this.dateArray[1])+" "+this.dateArray[0];
-	document.getElementById("op14").innerHTML = output14;
+	var tem=dateArray[2];
+	var output14 = dayName+", "+dateFormat(tem)+" "+monthNameWiseFormate(dateArray[1])+" "+dateArray[0];
+	return output14;
 }
 
 function dayDiff(a,b) {
-	this.dateArray=a;
-	this.dateArray2=b;
-	if(this.dateArray[2]<this.dateArray2[2]){
-		var diffDay = this.dateArray2[2]-this.dateArray[2];
+	var dateArray=a;
+	var dateArray2=b;
+	if(dateArray[2]<dateArray2[2]){
+		var diffDay = dateArray2[2]-dateArray[2];
 	}
 	else{
-		var diffDay = this.dateArray[2]-this.dateArray2[2];
+		var diffDay = dateArray[2]-dateArray2[2];
 	}
-	document.getElementById("diffOfDate").innerHTML = diffDay;
+	return diffDay;
 }
 
 function monthDiff(a,b) {
-	this.dateArray=a;
-	this.dateArray2=b;
-	if(this.dateArray[1]<this.dateArray2[1]){
-		var monthDif = this.dateArray2[1]-this.dateArray[1];
+	var dateArray=a;
+	var dateArray2=b;
+	if(dateArray[1]<dateArray2[1]){
+		var monthDif = dateArray2[1]-dateArray[1];
 	}
 	else{
-		var monthDif = this.dateArray[1]-this.dateArray2[1];
+		var monthDif = dateArray[1]-dateArray2[1];
 	}
-	document.getElementById("diffOfMonth").innerHTML = monthDif;
+	return monthDif;
 }
 
 function yearDiff(a,b) {
-	this.dateArray=a;
-	this.dateArray2=b;
-	if(this.dateArray[0]<this.dateArray2[0]){
-		var yearDif = this.dateArray2[0]-this.dateArray[0];
+	var dateArray=a;
+	var dateArray2=b;
+	if(dateArray[0]<dateArray2[0]){
+		var yearDif = dateArray2[0]-dateArray[0];
 	}
 	else{
-		var yearDif = this.dateArray[0]-this.dateArray2[0];
+		var yearDif = dateArray[0]-dateArray2[0];
 	}
-	document.getElementById("diffOfYear").innerHTML = yearDif;
+	return yearDif;
 }
 
 function monthNameWiseFormate(b) {
