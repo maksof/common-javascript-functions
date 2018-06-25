@@ -31,13 +31,10 @@
 					<h2 class="card-title" data-toggle="collapse" data-target="#demo"><a>dd/mm/yyyy Formate</a></h2>
 					<div id="demo" class="collapse">
 						<h2 id="op1"></h2>
-						<div class="p-3 m-3"><form>
-							Enter Date:<br>
-							<input type="text" id="userDate" placeholder="dd.mm.yyy" ">
-							<br>
-						</form> 
-						<br>
-						<button type="button" class="btn btn-primary" onclick="dateFormatting()">submit</button>
+						<div class="p-3 m-3">
+							<input type="date" id="datepick1">
+						<br><br>
+						<button type="button" class="btn btn-primary" onclick="setDateDDMM()">submit</button>
 					</div>
 				</div>
 			</div>
@@ -48,13 +45,10 @@
 				<h2 class="card-title" data-toggle="collapse" data-target="#demo2"><a>mm/dd/yyyy Formate</a></h2>
 				<div id="demo2" class="collapse">
 					<h2 id="op2"></h2>
-					<div class="p-3 m-3"><form>
-						Enter Date:<br>
-						<input type="text" id="userDate2" placeholder="dd.mm.yyy" ">
-						<br>
-					</form> 
-					<br>
-					<button type="button" class="btn btn-primary" onclick="dateFormattingMMdd()">submit</button>
+					<div class="p-3 m-3">
+						<input type="date" id="datepick2">
+					<br><br>
+					<button type="button" class="btn btn-primary" onclick="setDateMMDD()">submit</button>
 				</div>
 			</div>
 		</div>
@@ -65,13 +59,10 @@
 			<h2 class="card-title" data-toggle="collapse" data-target="#demo3"><a>dd-mm-yyyy Formate</a></h2>
 			<div id="demo3" class="collapse">
 				<h2 id="op3"></h2>
-				<div class="p-3 m-3"><form>
-					Enter Date:<br>
-					<input type="text" id="userDate3" placeholder="dd.mm.yyy" ">
-					<br>
-				</form> 
-				<br>
-				<button type="button" class="btn btn-primary" onclick="dateFormattingDDmmDash()">submit</button>
+				<div class="p-3 m-3">
+					<input type="date" id="datepick3">
+				<br><br>
+				<button type="button" class="btn btn-primary" onclick="setDateDDMMdash()">submit</button>
 			</div>
 		</div>
 	</div>
@@ -82,13 +73,10 @@
 		<h2 class="card-title" data-toggle="collapse" data-target="#demo4"><a>mm-dd-yyyy Formate</a></h2>
 		<div id="demo4" class="collapse">
 			<h2 id="op4"></h2>
-			<div class="p-3 m-3"><form>
-				Enter Date:<br>
-				<input type="text" id="userDate4" placeholder="dd.mm.yyy" ">
-				<br>
-			</form> 
-			<br>
-			<button type="button" class="btn btn-primary" onclick="dateFormattingMMddDash()">submit</button>
+			<div class="p-3 m-3">
+				<input type="date" id="datepick4">
+			<br><br>
+			<button type="button" class="btn btn-primary" onclick="setDateMMDDdash()">submit</button>
 		</div>
 	</div>
 </div>
@@ -99,13 +87,10 @@
 		<h2 class="card-title" data-toggle="collapse" data-target="#demo5"><a>day-mm-yyyy Formate</a></h2>
 		<div id="demo5" class="collapse">
 			<h2 id="op5"></h2>
-			<div class="p-3 m-3"><form>
-				Enter Date:<br>
-				<input type="text" id="userDate5" placeholder="dd.mm.yyy" ">
-				<br>
-			</form> 
-			<br>
-			<button type="button" class="btn btn-primary" onclick="dateFormattingDayMM()">submit</button>
+			<div class="p-3 m-3">
+				<input type="date" id="datepick5">
+			<br><br>
+			<button type="button" class="btn btn-primary" onclick="setDateMonthNameWiseDD()">submit</button>
 		</div>
 	</div>
 </div>
@@ -116,13 +101,10 @@
 		<h2 class="card-title" data-toggle="collapse" data-target="#demo6"><a>dd-month-yyyy Formate</a></h2>
 		<div id="demo6" class="collapse">
 			<h2 id="op6"></h2>
-			<div class="p-3 m-3"><form>
-				Enter Date:<br>
-				<input type="text" id="userDate6" placeholder="dd.mm.yyy" ">
-				<br>
-			</form> 
-			<br>
-			<button type="button" class="btn btn-primary" onclick="dateFormattingMMday()">submit</button>
+			<div class="p-3 m-3">
+				<input type="date" id="datepick6">
+			<br><br>
+			<button type="button" class="btn btn-primary" onclick="setDateMonthNameWiseMM()">submit</button>
 		</div>
 	</div>
 </div>
@@ -133,13 +115,24 @@
 		<h2 class="card-title" data-toggle="collapse" data-target="#demo7"><a>day-month-yyyy Formate</a></h2>
 		<div id="demo7" class="collapse">
 			<h2 id="op7"></h2>
-			<div class="p-3 m-3"><form>
-				Enter Date:<br>
-				<input type="text" id="userDate7" placeholder="dd.mm.yyy">
-				<br>
-			</form> 
-			<br>
-			<button type="button" class="btn btn-primary" onclick="dateFormattingDayMonth()">submit</button>
+			<div class="p-3 m-3">
+				<input type="date" id="datepick7">
+			<br><br>
+			<button type="button" class="btn btn-primary" onclick="setDateMonthNameWise()">submit</button>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="col-12">
+	<div class="card" style="cursor: pointer;">
+		<h2 class="card-title" data-toggle="collapse" data-target="#demo14"><a>dayName-month-yyyy Formate</a></h2>
+		<div id="demo14" class="collapse">
+			<h2 id="op14"></h2>
+			<div class="p-3 m-3">
+				<input type="date" id="datepick14">
+			<br><br>
+			<button type="button" class="btn btn-primary" onclick="dayNameWithMonthName()">submit</button>
 		</div>
 	</div>
 </div>
@@ -150,16 +143,11 @@
 		<h2 class="card-title" data-toggle="collapse" data-target="#demo8"><a>Calculate Day Difference</a></h2>
 		<div id="demo8" class="collapse">
 			<h2 id="diffOfDate"></h2>
-			<div class="p-3 m-3"><form>
-				Enter Date:<br>
-				<input type="text" id="userDate8" placeholder="dd.mm.yyy">
-				<br>
-				Enter Second Date:<br>
-				<input type="text" id="userDate11" placeholder="dd.mm.yyy">
-				<br>
-			</form> 
-			<br>
-			<button type="button" class="btn btn-primary" onclick="dateDifference()">Calculate</button>
+			<div class="p-3 m-3">
+				<label>Enter First Date: &nbsp</label> <input type="date" id="datepick8">
+			<label>&nbsp Enter Second Date: &nbsp</label>	<input type="date" id="datepick11">
+			<br><br>
+			<button type="button" class="btn btn-primary" onclick="dayDifference()">Calculate</button>
 		</div>
 	</div>
 </div>
@@ -170,16 +158,11 @@
 		<h2 class="card-title" data-toggle="collapse" data-target="#demo9"><a>Calculate Month difference</a></h2>
 		<div id="demo9" class="collapse">
 			<h2 id="diffOfMonth"></h2>
-			<div class="p-3 m-3"><form>
-				Enter Date:<br>
-				<input type="text" id="userDate9" placeholder="dd.mm.yyy">
-				<br>
-				Enter Second Date:<br>
-				<input type="text" id="userDate12" placeholder="dd.mm.yyy">
-				<br>
-			</form> 
-			<br>
-			<button type="button" class="btn btn-primary" onclick="monthlyDiff()">Calculate</button>
+			<div class="p-3 m-3">
+				<label>Enter First Date: &nbsp</label><input type="date" id="datepick9">
+				<label>&nbsp Enter Second Date: &nbsp</label><input type="date" id="datepick12">
+			<br><br>
+			<button type="button" class="btn btn-primary" onclick="monthDifference()">Calculate</button>
 		</div>
 	</div>
 </div>
@@ -190,16 +173,11 @@
 		<h2 class="card-title" data-toggle="collapse" data-target="#demo10"><a>Calculate year Difference</a></h2>
 		<div id="demo10" class="collapse">
 			<h2 id="diffOfYear"></h2>
-			<div class="p-3 m-3"><form>
-				Enter Date:<br>
-				<input type="text" id="userDate10" placeholder="dd.mm.yyy">
-				<br>
-				Enter Second Date:<br>
-				<input type="text" id="userDate13" placeholder="dd.mm.yyy">
-				<br>
-			</form> 
-			<br>
-			<button type="button" class="btn btn-primary" onclick="yearDiff()">Calculate</button>
+			<div class="p-3 m-3">
+				<label>Enter First Date: &nbsp</label><input type="date" id="datepick10">
+				<label>&nbsp Enter Second Date: &nbsp</label><input type="date" id="datepick13"> 
+			<br><br>
+			<button type="button" class="btn btn-primary" onclick="yearDifference()">Calculate</button>
 		</div>
 	</div>
 </div>
@@ -208,4 +186,5 @@
 </div>
 </body>
 </html>
+<script src="getElements.js"></script>
 <script src="common-functions.js"></script>
