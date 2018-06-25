@@ -56,7 +56,10 @@ function dayDiff(input1,input2) {
 	else{
 		var diffDay = date.getDate()-date2.getDate();
 	}
-	return diffDay;
+	// return diffDay;
+	var oneDay = 24*60*60*1000;
+	var diffDays = Math.round(Math.abs((date.getTime() - date2.getTime())/(oneDay)));
+	return diffDays;
 }
 
 function monthDiff(input1,input2) {
