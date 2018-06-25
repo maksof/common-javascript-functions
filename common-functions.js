@@ -1,49 +1,49 @@
 function dateFormatSlashDDMM(input) {
 	var date = new Date(input);
-	var output1 = date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear();
+	var output1 = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
 	return output1;
 }
 
 function dateFormatSlashMMDD(input) {
 	var date = new Date(input);
-	var output2 = date.getMonth()+"/"+date.getDate()+"/"+date.getFullYear();
+	var output2 = (date.getMonth()+1) +"/"+date.getDate()+"/"+date.getFullYear();
 	return output2;
 }
 
 function dateFormatDashDDMM(input) {
 	var date = new Date(input);
-	var output3 = date.getDate()+"-"+date.getMonth()+"-"+date.getFullYear();
+	var output3 = date.getDate()+"-"+(date.getMonth()+1) +"-"+date.getFullYear();
 	return output3;
 }
 
 function dateFormatDashMMDD(input) {
 	var date = new Date(input);
-	var output4 = date.getMonth()+"-"+date.getDate()+"-"+date.getFullYear();
+	var output4 = (date.getMonth()+1)+"-"+date.getDate()+"-"+date.getFullYear();
 	return output4;
 }
 
 function monthNameFormatDate(input) {
 	var date = new Date(input);
-	var output5 = date.getDate()+"-"+monthNameWiseFormate(date.getMonth())+"-"+date.getFullYear();
+	var output5 = date.getDate()+"-"+monthNameWiseFormate((date.getMonth()+1))+"-"+date.getFullYear();
 	return output5;
 }
 
 function monthNameFormatDateMMDD(input) {
 	var date = new Date(input);
-	var output6 = monthNameWiseFormate(date.getMonth())+"-"+date.getDate()+"-"+date.getFullYear();
+	var output6 = monthNameWiseFormate((date.getMonth()+1))+"-"+date.getDate()+"-"+date.getFullYear();
 	return output6;
 }
 
 function dayMonthNameFormatDate(input) {
 	var date = new Date(input);
-	var output7 = dateFormat(date.getDate())+" "+monthNameWiseFormate(date.getMonth())+" "+date.getFullYear();
+	var output7 = dateFormat(date.getDate())+" "+monthNameWiseFormate((date.getMonth()+1))+" "+date.getFullYear();
 	return output7;
 }
 
 function dayNameMonthNameFormatDate(input) {
 	var date = new Date(input);
 	var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday'];
-	var output14 = days[date.getDay()]+", "+dateFormat(date.getDate()+1)+" "+monthNameWiseFormate(date.getMonth())+" "+date.getFullYear();
+	var output14 = days[date.getDay()]+", "+dateFormat(date.getDate()+1)+" "+monthNameWiseFormate((date.getMonth()+1))+" "+date.getFullYear();
 	return output14;
 }
 
@@ -62,13 +62,24 @@ function dayDiff(input1,input2) {
 function monthDiff(input1,input2) {
 	var date = new Date(input1);
 	var date2 = new Date(input2);
-	if(date.getMonth() < date2.getMonth()){
-		var monthDif = date2.getMonth()-date.getMonth();
+	if((date.getMonth()+1) < date2.getMonth()+1){
+		var monthDif = (date2.getMonth()+1)-(date.getMonth()+1);
 	}
 	else{
-		var monthDif = date.getMonth()-date2.getMonth();
+		var monthDif = (date.getMonth()+1)- (date2.getMonth()+1);
 	}
-	return monthDif;
+
+	if(date.getFullYear()<date2.getFullYear()){
+		var yearDif = date2.getFullYear()-date.getFullYear();
+	}
+	else{
+		var yearDif = date.getFullYear()-date2.getFullYear();
+	}
+		var preMonth= 12-date2.getMonth();
+		if(yearDif>=1){
+		return preMonth +(12*(yearDif-1))+date.getMonth();
+	}
+	else{ return monthDif; }
 }
 
 function yearDiff(input1,input2) {
