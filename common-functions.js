@@ -1,89 +1,84 @@
-function dateFormatSlashDDMM(a) {
-	var dateArray=a;
-	var output1 = dateArray[2]+"/"+dateArray[1]+"/"+dateArray[0];
+function dateFormatSlashDDMM(input) {
+	var date = new Date(input);
+	var output1 = date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear();
 	return output1;
 }
 
-function dateFormatSlashMMDD(a) {
-	var dateArray=a;
-	var output2 = dateArray[1]+"/"+dateArray[2]+"/"+dateArray[0];
+function dateFormatSlashMMDD(input) {
+	var date = new Date(input);
+	var output2 = date.getMonth()+"/"+date.getDate()+"/"+date.getFullYear();
 	return output2;
 }
 
-function dateFormatDashDDMM(a) {
-	var dateArray=a;
-	var output3 = dateArray[2]+"-"+dateArray[1]+"-"+dateArray[0];
+function dateFormatDashDDMM(input) {
+	var date = new Date(input);
+	var output3 = date.getDate()+"-"+date.getMonth()+"-"+date.getFullYear();
 	return output3;
 }
 
-function dateFormatDashMMDD(a) {
-	var dateArray=a;
-	var output4 = dateArray[1]+"-"+dateArray[2]+"-"+dateArray[0];
+function dateFormatDashMMDD(input) {
+	var date = new Date(input);
+	var output4 = date.getMonth()+"-"+date.getDate()+"-"+date.getFullYear();
 	return output4;
 }
 
-function monthNameFormatDate(a) {
-	var dateArray=a;
-	var output5 = dateArray[2]+"-"+monthNameWiseFormate(dateArray[1])+"-"+dateArray[0];
+function monthNameFormatDate(input) {
+	var date = new Date(input);
+	var output5 = date.getDate()+"-"+monthNameWiseFormate(date.getMonth())+"-"+date.getFullYear();
 	return output5;
 }
 
-function monthNameFormatDateMMDD(a) {
-	var dateArray=a;
-	var output6 = monthNameWiseFormate(dateArray[1])+"-"+dateArray[2]+"-"+dateArray[0];
+function monthNameFormatDateMMDD(input) {
+	var date = new Date(input);
+	var output6 = monthNameWiseFormate(date.getMonth())+"-"+date.getDate()+"-"+date.getFullYear();
 	return output6;
 }
 
-function dayMonthNameFormatDate(a) {
-	var dateArray=a;
-	var output7 = dateFormat(dateArray[2])+" "+monthNameWiseFormate(dateArray[1])+" "+dateArray[0];
+function dayMonthNameFormatDate(input) {
+	var date = new Date(input);
+	var output7 = dateFormat(date.getDate())+" "+monthNameWiseFormate(date.getMonth())+" "+date.getFullYear();
 	return output7;
 }
 
-function dayNameMonthNameFormatDate(a) {
-	var getdate=a;
-	var dateArray=a;
-	dateArray = getdate.split('-');
-	var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-	var d = new Date(getdate);
-	var dayName = days[d.getDay()];
-	var tem=dateArray[2];
-	var output14 = dayName+", "+dateFormat(tem)+" "+monthNameWiseFormate(dateArray[1])+" "+dateArray[0];
+function dayNameMonthNameFormatDate(input) {
+	var date = new Date(input);
+	var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday'];
+	var output14 = days[date.getDay()]+", "+dateFormat(date.getDate()+1)+" "+monthNameWiseFormate(date.getMonth())+" "+date.getFullYear();
 	return output14;
 }
 
-function dayDiff(a,b) {
-	var dateArray=a;
-	var dateArray2=b;
-	if(dateArray[2]<dateArray2[2]){
-		var diffDay = dateArray2[2]-dateArray[2];
+function dayDiff(input1,input2) {
+	var date = new Date(input1);
+	var date2 = new Date(input2);
+	if(date.getDate()<date2.getDate()){
+		var diffDay = date2.getDate()-date.getDate();
 	}
 	else{
-		var diffDay = dateArray[2]-dateArray2[2];
+		var diffDay = date.getDate()-date2.getDate();
 	}
 	return diffDay;
 }
 
-function monthDiff(a,b) {
-	var dateArray=a;
-	var dateArray2=b;
-	if(dateArray[1]<dateArray2[1]){
-		var monthDif = dateArray2[1]-dateArray[1];
+function monthDiff(input1,input2) {
+	var date = new Date(input1);
+	var date2 = new Date(input2);
+	if(date.getMonth() < date2.getMonth()){
+		var monthDif = date2.getMonth()-date.getMonth();
 	}
 	else{
-		var monthDif = dateArray[1]-dateArray2[1];
+		var monthDif = date.getMonth()-date2.getMonth();
 	}
 	return monthDif;
 }
 
-function yearDiff(a,b) {
-	var dateArray=a;
-	var dateArray2=b;
-	if(dateArray[0]<dateArray2[0]){
-		var yearDif = dateArray2[0]-dateArray[0];
+function yearDiff(input1,input2) {
+	var date = new Date(input1);
+	var date2 = new Date(input2);
+	if(date.getFullYear()<date2.getFullYear()){
+		var yearDif = date2.getFullYear()-date.getFullYear();
 	}
 	else{
-		var yearDif = dateArray[0]-dateArray2[0];
+		var yearDif = date.getFullYear()-date2.getFullYear();
 	}
 	return yearDif;
 }
