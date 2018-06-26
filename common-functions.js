@@ -1,50 +1,42 @@
 function dateFormatSlashDDMM(input) {
 	var date = new Date(input);
-	var output = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
-	return output;
+	return output = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
 }
 
 function dateFormatSlashMMDD(input) {
 	var date = new Date(input);
-	var output = (date.getMonth()+1) +"/"+date.getDate()+"/"+date.getFullYear();
-	return output;
+	return output = (date.getMonth()+1) +"/"+date.getDate()+"/"+date.getFullYear();
 }
 
 function dateFormatDashDDMM(input) {
 	var date = new Date(input);
-	var output = date.getDate()+"-"+(date.getMonth()+1) +"-"+date.getFullYear();
-	return output;
+	return output = date.getDate()+"-"+(date.getMonth()+1) +"-"+date.getFullYear();
 }
 
 function dateFormatDashMMDD(input) {
 	var date = new Date(input);
-	var output = (date.getMonth()+1)+"-"+date.getDate()+"-"+date.getFullYear();
-	return output;
+	return output = (date.getMonth()+1)+"-"+date.getDate()+"-"+date.getFullYear();
 }
 
 function monthNameFormatDate(input) {
 	var date = new Date(input);
-	var output = date.getDate()+"-"+monthNameWiseFormate((date.getMonth()+1))+"-"+date.getFullYear();
-	return output;
+	return output = date.getDate()+"-"+monthNameWiseFormate((date.getMonth()+1))+"-"+date.getFullYear();
 }
 
 function monthNameFormatDateMMDD(input) {
 	var date = new Date(input);
-	var output = monthNameWiseFormate((date.getMonth()+1))+"-"+date.getDate()+"-"+date.getFullYear();
-	return output;
+	return output = monthNameWiseFormate((date.getMonth()+1))+"-"+date.getDate()+"-"+date.getFullYear();
 }
 
 function dayMonthNameFormatDate(input) {
 	var date = new Date(input);
-	var output = dateFormat(date.getDate())+" "+monthNameWiseFormate((date.getMonth()+1))+" "+date.getFullYear();
-	return output;
+	return output = dateFormat(date.getDate())+" "+monthNameWiseFormate((date.getMonth()+1))+" "+date.getFullYear();
 }
 
 function dayNameMonthNameFormatDate(input) {
 	var date = new Date(input);
 	var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday'];
-	var output = days[date.getDay()]+", "+dateFormat(date.getDate()+1)+" "+monthNameWiseFormate((date.getMonth()+1))+" "+date.getFullYear();
-	return output;
+	return output = days[date.getDay()]+", "+dateFormat(date.getDate()+1)+" "+monthNameWiseFormate((date.getMonth()+1))+" "+date.getFullYear();
 }
 
 function dayDiff(input1,input2) {
@@ -57,33 +49,17 @@ function dayDiff(input1,input2) {
 		var diffDay = date.getDate()-date2.getDate();
 	}
 	var oneDay = 24*60*60*1000;
-	var diffDays = Math.round(Math.abs((date.getTime() - date2.getTime())/(oneDay)));
-	return diffDays;
+	return diffDays = Math.round(Math.abs((date.getTime() - date2.getTime())/(oneDay)));
 }
 
 function monthDiff(input1,input2) {
-	var date = new Date(input1);
+	var date1 = new Date(input1);
 	var date2 = new Date(input2);
-	if((date.getMonth()+1) < date2.getMonth()+1){
-		var monthDif = (date2.getMonth()+1)-(date.getMonth()+1);
-	}
-	else{
-		var monthDif = (date.getMonth()+1)- (date2.getMonth()+1);
-	}
-
-	if(date.getFullYear()<date2.getFullYear()){
-		var yearDif = date2.getFullYear()-date.getFullYear();
-	}
-	else{
-		var yearDif = date.getFullYear()-date2.getFullYear();
-	}
-		var preMonth= 12-date2.getMonth();
-		if(yearDif>=1){
-		return preMonth +(12*(yearDif-1))+date.getMonth();
-	}
-	
-	else{ return monthDif; }
-	
+    var months;
+    months = (date2.getFullYear() - date1.getFullYear()) * 12;
+    months -= date1.getMonth() + 1;
+    months += date2.getMonth();
+    return months <= 0 ? 0 : months+1;
 }
 
 function yearDiff(input1,input2) {
@@ -100,36 +76,11 @@ function yearDiff(input1,input2) {
 
 function monthNameWiseFormate(b) {
 
-	var month = b;
-	if(month==1){return "January";}
-	else if(month==2){return "February";}
-	else if(month==3){return "March";}
-	else if(month==4){return "April";}
-	else if(month==5){return "May";}
-	else if(month==6){return "June";}
-	else if(month==7){return "July";}
-	else if(month==8){return "August";}
-	else if(month==9){return "September";}
-	else if(month==10){return "October";}
-	else if(month==11){return "November";}
-	else if(month==12){return "December";}
+	var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+	return months[b+1];
 }
 
 function dateFormat(c) {
-	console.log(c);
-	var day = c;
-	if(day==1){return day+"st";}
-	else if(day==2){return day+"nd";}
-	else if(day==3){return day+"rd";}
-	else if(day==4||day==5||day==6||day==7
-		||day==8||day==9||day==10||day==11
-		||day==12||day==13||day==14||day==15
-		||day==16||day==17||day==18||day==19
-		||day==20){return day+"th";}
-		else if(day==21){return day+"st";}
-	else if(day==22){return day+"nd";}
-	else if(day==23){return day+"rd";}
-	else if(day==24||day==25||day==26||day==27
-		||day==28||day==29||day==30){return day+"th";}
-		else if(day==31){return day+"st";}
+	var days=['1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th','11th','12th','13th','14th','15th','16th','17th','18th','19th','20th','21st','22nd','23rd','24th','25th','26th','27th','28th','29th','30th','31st']
+	return days[c+1];
 }
