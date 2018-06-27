@@ -1,6 +1,11 @@
 function setDateDDMM() {
 	var curDate = document.getElementById("datepick1").value;
 	var dateArray = curDate.split('-');
+	checkArrayEmptyOrNot();
+	deleteArrayRec();
+	deleteMultipleRecFromArray();
+	MergeArray();
+	IntersectTwoArray();
 	var value1 = dateFormatSlashDDMM(dateArray);
 	document.getElementById("op1").innerHTML = value1;
 }
@@ -79,4 +84,105 @@ function yearDifference() {
 	var dateArray2 = date2.split('-');
 	var value11 = yearDiff(dateArray,dateArray2);
 	document.getElementById("diffOfYear").innerHTML = value11;
+}
+
+function checkArrayEmpOrNt() {
+	var curData = document.getElementById("arrayfield1").value;
+	var dataArray = curData.split(',');
+	var displayArray = checkArrayEmptyOrNot(dataArray);
+	document.getElementById("opArray1").innerHTML = displayArray;
+}
+
+function DelArrayRec() {
+	var curData = document.getElementById("arrayfield2").value;
+	var dataArray = curData.split(',');
+	var curData2 = document.getElementById("arrayfield3").value;
+	var displayArray = deleteArrayRec(dataArray,curData2);
+	document.getElementById("opArray2").innerHTML = displayArray;
+}
+
+function delMultiRec() {
+	var curData = document.getElementById("arrayfield4").value;
+	var dataArray = curData.split(',');
+	var curData2 = document.getElementById("arrayfield5").value;
+	var dataArray2 = curData2.split(',');
+	var displayArray = deleteMultipleRecFromArray(dataArray,dataArray2);
+	document.getElementById("opArray3").innerHTML = displayArray;
+}
+
+function MergeTwoArray() {
+	var curData = document.getElementById("arrayfield6").value;
+	var curData2 = document.getElementById("arrayfield7").value;
+	var displayArray = MergeArray(curData,curData2);
+	document.getElementById("opArray4").innerHTML = displayArray;
+}
+
+function intersectArray() {
+	var curData = document.getElementById("arrayfield8").value;
+	var dataArray = curData.split(',');
+	var curData2 = document.getElementById("arrayfield9").value;
+	var dataArray2 = curData2.split(',');
+	var displayArray = IntersectTwoArray(dataArray,dataArray2);
+	document.getElementById("opArray5").innerHTML = displayArray;
+}
+
+function delMultiRecbyIndex() {
+	var curData = document.getElementById("arrayfield10").value;
+	var dataArray = JSON.parse(curData);
+	var curData2 = document.getElementById("arrayfield11").value;
+	var displayArray = DelMultiRecByIndex(dataArray,curData2);
+	document.getElementById("opArray6").innerHTML = JSON.stringify(displayArray);
+}
+
+function delMultiRecbyValues() {
+	var curData = document.getElementById("arrayfield12").value;
+	var dataArray = JSON.parse(curData);
+	var curData2 = document.getElementById("arrayfield13").value;
+	var dataArray2 = JSON.parse(curData2);
+	var displayArray = DelMultiObjRecByValue(dataArray,dataArray2);
+	document.getElementById("opArray7").innerHTML = JSON.stringify(displayArray);
+}
+
+function maxArrayVales() {
+	var curData = document.getElementById("arrayfield14").value;
+	var dataArray = curData.split(',');
+	var displayArray = findMaxValueFromArray(dataArray);
+	document.getElementById("opArray8").innerHTML = displayArray;
+}
+
+function minArrayVales() {
+	var curData = document.getElementById("arrayfield15").value;
+	var dataArray = curData.split(',');
+	var displayArray = findMinValueFromArray(dataArray);
+	document.getElementById("opArray9").innerHTML = displayArray;
+}
+
+function sumUpQuantitySameId() {
+	var curData = document.getElementById("arrayfield16").value;
+	dataArray=JSON.parse(curData);
+	var displayArray = sumUpQuantitySameIDfromObj(dataArray);
+	document.getElementById("opArray10").innerHTML = JSON.stringify(displayArray);
+}
+
+function sumUpQuantityByProvidingId() {
+	var curData = document.getElementById("arrayfield17").value;
+	dataArray=JSON.parse(curData);
+	var curData2 = document.getElementById("arrayfield18").value;
+	var displayArray = sumUpQuantityByProvidingIDfromObj(dataArray,curData2);
+	document.getElementById("opArray11").innerHTML = JSON.stringify(displayArray);	
+}
+
+function findObjByGivenId() {
+	var curData = document.getElementById("arrayfield19").value;
+	dataArray=JSON.parse(curData);
+	var curData2 = document.getElementById("arrayfield20").value;
+	var displayArray = findObjProvidingIDfromObj(dataArray,curData2);
+	document.getElementById("opArray12").innerHTML = JSON.stringify(displayArray);		
+}
+
+function arrayShuffle() {
+	var curData = document.getElementById("arrayfield21").value;
+	var dataArray = curData.split(',');
+	var displayArray = arrayShuffligFunc(dataArray);
+	document.getElementById("opArray13").innerHTML = displayArray;	
 }
