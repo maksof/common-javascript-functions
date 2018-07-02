@@ -82,161 +82,154 @@ function checkArrayEmptyOrNot(array) {
 	else return false;
 }
 
-	function deleteArrayRec(array, delIndex) {
-		console.log(array);
-		console.log(delIndex);
-		array.splice(delIndex,1);
-		return array;
-	}
+function deleteArrayRec(array, delIndex) {
+	array.splice(delIndex,1);
+	return array;
+}
 
-	function deleteMultipleRecFromArray(array, delIndex) {
-		console.log(array);
-		console.log(delIndex);
-
-			for(var j=0;j<delIndex.length;j++){
+function deleteMultipleRecFromArray(array, delIndex) {
+	for(var j=0;j<delIndex.length;j++){
 		for(var i=0; i<array.length; i++){
-				if(array[i]==delIndex[j]) {
-					array.splice(i,1);
-				}
-			}
+			if(array[i]==delIndex[j]) array.splice(i,1);
 		}
-		return array;
 	}
+	return array;
+}
 
-	function MergeArray(array1,array2) {
-		return array1.concat(array2);
-	}
+function MergeArray(array1,array2) {
+	return array1.concat(array2);
+}
 
-	function IntersectTwoArray(array1,array2) {
-		arr=[];
-		for(var i=0; i<array1.length; i++){
-			for(var j=0;j<array2.length;j++){
-				if(JSON.stringify(array1[i])==JSON.stringify(array2[j])) arr.push(array2[j]);
-			}
+function IntersectTwoArray(array1,array2) {
+	arr=[];
+	for(var i=0; i<array1.length; i++){
+		for(var j=0;j<array2.length;j++){
+			if(JSON.stringify(array1[i])==JSON.stringify(array2[j])) arr.push(array2[j]);
 		}
-		return arr;
 	}
+	return arr;
+}
 
-	function DelMultiRecByIndex(array,delIndex) {
-		arr=[];
-		for(var i=0; i<array.length; i++){
-			for(var j=0;j<delIndex.length;j++){
-				if(i==delIndex[j]) i+=1;
-			}
-			arr.push(array[i]);
+function DelMultiRecByIndex(array,delIndex) {
+	arr=[];
+	for(var i=0; i<array.length; i++){
+		for(var j=0;j<delIndex.length;j++){
+			if(i==delIndex[j]) i+=1;
 		}
-		return arr;
-	}	
+		arr.push(array[i]);
+	}
+	return arr;
+}	
 
-	function DelMultiObjRecByValue(array, delIndex) {
-		for(var i=0; i<array.length; i++){
-			for(var j=0;j<delIndex.length;j++){
-				if(JSON.stringify(array[i])==JSON.stringify(delIndex[j])) array.splice(i,1);
-			}
+function DelMultiObjRecByValue(array, delIndex) {
+	for(var i=0; i<array.length; i++){
+		for(var j=0;j<delIndex.length;j++){
+			if(JSON.stringify(array[i])==JSON.stringify(delIndex[j])) array.splice(i,1);
 		}
-		return array;
 	}
+	return array;
+}
 
-	function findMaxValueFromArray(array){
-		return (Math.max.apply(null, array));
-	}
+function findMaxValueFromArray(array){
+	return (Math.max.apply(null, array));
+}
 
-	function findMinValueFromArray(array) {
-		return (Math.min.apply(null, array));
-	}	
+function findMinValueFromArray(array) {
+	return (Math.min.apply(null, array));
+}	
 
-	function sumUpQuantitySameIDfromObj(object) {
-		obj={};
-		arr=[];
-		for(i=0;i<object.length;i++){
-			for(j=i+1;j<object.length;j++){
-				if(object[i].id==object[j].id)
-				{
-					arr.push(obj={
-						id: object[i].id,
-						count: object[i].count+object[j].count
-					});
-				}
-			}
-		}
-		return arr;
-	}
-
-	function sumUpQuantityByProvidingIDfromObj(object,id) {
-		obj={};
-		arr=[];
-		for(i=0;i<object.length;i++){
-			for(j=i+1;j<object.length;j++){
-				if(object[i].id==object[j].id && object[j].id==id )
-				{
-					arr.push(obj={
-						id: object[i].id,
-						count: object[i].count+object[j].count
-					});
-				}
-			}
-		}
-		return arr;	
-	}
-
-	function findObjProvidingIDfromObj(object,id) {
-		arr=[];
-		for(i=0;i<object.length;i++){
-			if(object[i].id==id) arr.push(object[i]);
-		}
-		return arr;
-	}
-
-	function arrayShuffligFunc(array) {
-		return array.sort(function(a, b){return 0.5 - Math.random()});
-	}
-
-	function objectEmptyOrNot(obj) {
-		for (var key in obj){
-			if(obj.hasOwnProperty(key)) return false;
-			else return (Object.getOwnPropertyNames(obj).length === 0);
-		}
-		return true;
-
-	}
-
-	function deleteKeyFromObj(obj1,obj2,key) {
-		var arr=[];
-		for(i=0;i<obj1.length;i++){
-			if(JSON.stringify(obj1[i])==JSON.stringify(obj2)){
-				delete obj1[i][key];
-				arr.push(obj1[i]);
-			}
-			else arr.push(obj1[i]);
-		}
-		return arr;
-	}
-
-	function convertObjectToUperAndLowerCaseFunc(obj) {
-		return (JSON.stringify(obj, function(key, value) {
-			if (typeof value === 'object' && value && !Array.isArray(value)) {
-				return Object.keys(value).reduce(function(obj, k) {
-					if(typeof value[k]==='number'||typeof value[k]==='object'||typeof value[k]==='boolean'||typeof value[k]==='undefined'){
-						obj[k.toUpperCase()] = value[k];
-					}
-					else obj[k.toUpperCase()] = value[k].toUpperCase();
-					return obj;
-				}, {});
-			}
-			return value;
-		}, 2));
-	}
-
-	function valueAgainstKeyFunc(obj1,key) {
-		JSON.stringify(obj1);
-		arr=[];
-		for(i=0;i<obj1.length;i++){
-			if(obj1[i].hasOwnProperty(key)){
+function sumUpQuantitySameIDfromObj(object) {
+	obj={};
+	arr=[];
+	for(i=0;i<object.length;i++){
+		for(j=i+1;j<object.length;j++){
+			if(object[i].id==object[j].id)
+			{
 				arr.push(obj={
-					[key]: obj1[i][key]
+					id: object[i].id,
+					count: object[i].count+object[j].count
 				});
 			}
 		}
-		if(arr.length==0) return false;
-		else return arr;
 	}
+	return arr;
+}
+
+function sumUpQuantityByProvidingIDfromObj(object,id) {
+	obj={};
+	arr=[];
+	for(i=0;i<object.length;i++){
+		for(j=i+1;j<object.length;j++){
+			if(object[i].id==object[j].id && object[j].id==id )
+			{
+				arr.push(obj={
+					id: object[i].id,
+					count: object[i].count+object[j].count
+				});
+			}
+		}
+	}
+	return arr;	
+}
+
+function findObjProvidingIDfromObj(object,id) {
+	arr=[];
+	for(i=0;i<object.length;i++){
+		if(object[i].id==id) arr.push(object[i]);
+	}
+	return arr;
+}
+
+function arrayShuffligFunc(array) {
+	return array.sort(function(a, b){return 0.5 - Math.random()});
+}
+
+function objectEmptyOrNot(obj) {
+	for (var key in obj){
+		if(obj.hasOwnProperty(key)) return false;
+		else return (Object.getOwnPropertyNames(obj).length === 0);
+	}
+	return true;
+
+}
+
+function deleteKeyFromObj(obj1,obj2,key) {
+	var arr=[];
+	for(i=0;i<obj1.length;i++){
+		if(JSON.stringify(obj1[i])==JSON.stringify(obj2)){
+			delete obj1[i][key];
+			arr.push(obj1[i]);
+		}
+		else arr.push(obj1[i]);
+	}
+	return arr;
+}
+
+function convertObjectToUperAndLowerCaseFunc(obj) {
+	return (JSON.stringify(obj, function(key, value) {
+		if (typeof value === 'object' && value && !Array.isArray(value)) {
+			return Object.keys(value).reduce(function(obj, k) {
+				if(typeof value[k]==='number'||typeof value[k]==='object'||typeof value[k]==='boolean'||typeof value[k]==='undefined'){
+					obj[k.toUpperCase()] = value[k];
+				}
+				else obj[k.toUpperCase()] = value[k].toUpperCase();
+				return obj;
+			}, {});
+		}
+		return value;
+	}, 2));
+}
+
+function valueAgainstKeyFunc(obj1,key) {
+	JSON.stringify(obj1);
+	arr=[];
+	for(i=0;i<obj1.length;i++){
+		if(obj1[i].hasOwnProperty(key)){
+			arr.push(obj={
+				[key]: obj1[i][key]
+			});
+		}
+	}
+	if(arr.length==0) return false;
+	else return arr;
+}

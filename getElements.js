@@ -86,7 +86,7 @@ function checkArrayEmpOrNt() {
 	var dataArray = curData.split(',');
 	var getAns = checkArrayEmptyOrNot(dataArray);
 	if(getAns==true) displayArray="array is Empty";
-		else displayArray="array is not Empty";
+	else displayArray="array is not Empty";
 	document.getElementById("opArray1").innerHTML = displayArray;
 }
 
@@ -99,7 +99,6 @@ function DelArrayRec() {
 
 function delMultiRec() {
 	var curData = document.getElementById("arrayfield4").value;
-	// var dataArray = curData.split(',');
 	var curData2 = document.getElementById("arrayfield5").value;
 	var dataArray2 = curData2.split(',');
 	var displayArray = deleteMultipleRecFromArray(JSON.parse(curData),dataArray2);
@@ -141,15 +140,13 @@ function delMultiRecbyValues() {
 
 function maxArrayVales() {
 	var curData = document.getElementById("arrayfield14").value;
-	var dataArray = curData.split(',');
-	var displayArray = findMaxValueFromArray(dataArray);
+	var displayArray = findMaxValueFromArray(JSON.parse(curData));
 	document.getElementById("opArray8").innerHTML = displayArray;
 }
 
 function minArrayVales() {
 	var curData = document.getElementById("arrayfield15").value;
-	var dataArray = curData.split(',');
-	var displayArray = findMinValueFromArray(dataArray);
+	var displayArray = findMinValueFromArray(JSON.parse(curData));
 	document.getElementById("opArray9").innerHTML = displayArray;
 }
 
