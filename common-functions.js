@@ -156,20 +156,17 @@ function sumUpQuantitySameIDfromObj(object) {
 }
 
 function sumUpQuantityByProvidingIDfromObj(object,id) {
-	obj={};
-	arr=[];
 	for(i=0;i<object.length;i++){
 		for(j=i+1;j<object.length;j++){
 			if(object[i].id==object[j].id && object[j].id==id )
 			{
-				arr.push(obj={
+				return obj={
 					id: object[i].id,
 					count: object[i].count+object[j].count
-				});
+				};
 			}
 		}
 	}
-	return arr;	
 }
 
 function findObjProvidingIDfromObj(object,id) {
