@@ -101,7 +101,7 @@ function MergeArray(array1,array2) {
 }
 
 function IntersectTwoArray(array1,array2) {
-	arr=[];
+	var arr=[];
 	for(var i=0; i<array1.length; i++){
 		for(var j=0;j<array2.length;j++){
 			if(JSON.stringify(array1[i])==JSON.stringify(array2[j])) arr.push(array2[j]);
@@ -111,7 +111,7 @@ function IntersectTwoArray(array1,array2) {
 }
 
 function DelMultiRecByIndex(array,delIndex) {
-	arr=[];
+	var arr=[];
 	for(var i=0; i<array.length; i++){
 		for(var j=0;j<delIndex.length;j++){
 			if(i==delIndex[j]) i+=1;
@@ -139,8 +139,7 @@ function findMinValueFromArray(array) {
 }	
 
 function sumUpQuantitySameIDfromObj(object) {
-	obj={};
-	arr=[];
+	var arr=[];
 	for(i=0;i<object.length;i++){
 		for(j=i+1;j<object.length;j++){
 			if(object[i].id==object[j].id)
@@ -219,7 +218,7 @@ function convertObjectToUperAndLowerCaseFunc(obj) {
 
 function valueAgainstKeyFunc(obj1,key) {
 	JSON.stringify(obj1);
-	arr=[];
+	var arr=[];
 	for(i=0;i<obj1.length;i++){
 		if(obj1[i].hasOwnProperty(key)){
 			arr.push(obj={
