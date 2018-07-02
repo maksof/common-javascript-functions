@@ -78,8 +78,8 @@ function dateFormat(c) {
 
 
 function checkArrayEmptyOrNot(array) {
-	if (array === undefined || array.length == 0||(array[0]=="" && array.length==1)) return "array is empty";
-	else return "array is not empty Array = "+array;}
+	if (array === 'undefined' || array.length == 0||(array[0]=="")) return true;
+	else return false;}
 
 	function deleteArrayRec(array, delIndex) {
 	arr=[];

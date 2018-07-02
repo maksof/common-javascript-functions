@@ -84,7 +84,9 @@ function yearDifference() {
 function checkArrayEmpOrNt() {
 	var curData = document.getElementById("arrayfield1").value;
 	var dataArray = curData.split(',');
-	var displayArray = checkArrayEmptyOrNot(dataArray);
+	var getAns = checkArrayEmptyOrNot(dataArray);
+	if(getAns==true) displayArray="array is Empty";
+		else displayArray="array is not Empty";
 	document.getElementById("opArray1").innerHTML = displayArray;
 }
 
