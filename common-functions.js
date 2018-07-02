@@ -102,7 +102,8 @@ function checkArrayEmptyOrNot(array) {
 	}
 
 	function MergeArray(array1,array2) {
-		return array1.concat(","+array2);
+		console.log(array1.concat(array2));
+		return array1.concat(array2);
 	}
 
 	function IntersectTwoArray(array1,array2) {

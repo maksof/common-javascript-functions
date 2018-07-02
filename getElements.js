@@ -110,8 +110,8 @@ function delMultiRec() {
 function MergeTwoArray() {
 	var curData = document.getElementById("arrayfield6").value;
 	var curData2 = document.getElementById("arrayfield7").value;
-	var displayArray = MergeArray(curData,curData2);
-	document.getElementById("opArray4").innerHTML = displayArray;
+	var displayArray = MergeArray(JSON.parse(curData),JSON.parse(curData2));
+	document.getElementById("opArray4").innerHTML = JSON.stringify(displayArray);
 }
 
 function intersectArray() {
