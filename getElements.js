@@ -189,7 +189,9 @@ function objEmptOrNot() {
 	if(curData=='') document.getElementById("opObj1").innerHTML = "can not be null";
 	else{
 		var dataArray = JSON.parse(curData);
-		var displayArray = objectEmptyOrNot(dataArray);
+		var getAns = objectEmptyOrNot(dataArray);
+		if(getAns==true) displayArray="Object is Empty";
+		else displayArray="object array is not empty";
 		document.getElementById("opObj1").innerHTML = displayArray;	
 	}
 }
@@ -216,6 +218,8 @@ function valueAgainsKey() {
 	var curData = document.getElementById("objField6").value;
 	var dataArray = JSON.parse(curData);
 	var curData = document.getElementById("objField7").value;
-	var displayArray = valueAgainstKeyFunc(dataArray,curData);
+	var getAns = valueAgainstKeyFunc(dataArray,curData);
+	if (getAns==false) displayArray="Key not exist";
+	else displayArray=getAns;
 	document.getElementById("opObj4").innerHTML = JSON.stringify(displayArray);		
 }

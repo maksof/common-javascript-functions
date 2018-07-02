@@ -203,11 +203,11 @@ function arrayShuffligFunc(array) {
 function objectEmptyOrNot(obj) {
 	for (var key in obj){
 		if(obj.hasOwnProperty(key)){
-			return "Object is not Empty"
+			return false;
 		}
 		else return (Object.getOwnPropertyNames(obj).length === 0);
 	}
-	return "Empty Object";
+	return true;
 
 }
 
@@ -252,6 +252,6 @@ function valueAgainstKeyFunc(obj1,key) {
 			});
 		}
 	}
-	if(arr.length==0) return"Key not Exsist";
+	if(arr.length==0) return false;
 	else return arr;
 }
