@@ -239,8 +239,8 @@
 					<div id="demoarray4" class="collapse">
 						<h2 id="opArray4"></h2>
 						<div class="p-3 m-3">
-							<label>Enter Array Value by Comma Seprated: &nbsp </label><input type="text" name="arr2" id="arrayfield6" placeholder="1,2,3,4">
-							<label>&nbsp Enter second Array Value by Comma Seprated:&nbsp </label><input type="text" name="arr3" id="arrayfield7" placeholder="1,2,3,4">
+							<label>Enter Array Value by Comma Seprated: &nbsp </label><input type="text" name="arr2" id="arrayfield6" placeholder="Enter Object">
+							<label>&nbsp Enter second Array Value by Comma Seprated:&nbsp </label><input type="text" name="arr3" id="arrayfield7" placeholder="Enter second Object">
 							<br><br>
 							<button type="button" class="btn btn-primary" onclick="MergeTwoArray()">submit</button>
 						</div>
@@ -254,8 +254,8 @@
 					<div id="demoarray5" class="collapse">
 						<h2 id="opArray5"></h2>
 						<div class="p-3 m-3">
-							<label>Enter Array Value by Comma Seprated: &nbsp </label><input type="text" name="arr2" id="arrayfield8" placeholder="1,2,3,4">
-							<label>&nbsp Enter second Array Value by Comma Seprated:&nbsp </label><input type="text" name="arr3" id="arrayfield9" placeholder="1,2,3,4">
+							<label>Enter Array Value by Comma Seprated: &nbsp </label><input type="text" name="arr2" id="arrayfield8" placeholder="Enter an object">
+							<label>&nbsp Enter second Array Value by Comma Seprated:&nbsp </label><input type="text" name="arr3" id="arrayfield9" placeholder="Enter an object">
 							<br><br>
 							<button type="button" class="btn btn-primary" onclick="intersectArray()">submit</button>
 						</div>
@@ -378,10 +378,71 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<h1 style="margin-left: 15px;">Objects Operation Functions</h1>
+		<div class="row p-3 m-3">
+			
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoObject1"><a>Check Object Empty or Not</a></h2>
+					<div id="demoObject1" class="collapse">
+						<h2 id="opObj1"></h2>
+						<div class="p-3 m-3">
+							<label>Enter an Object: &nbsp </label><input type="text" name="arr2" id="objField1" placeholder="">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="objEmptOrNot()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoObject2"><a>Delete an object by object key</a></h2>
+					<div id="demoObject2" class="collapse">
+						<h2 id="opObj2"></h2>
+						<div class="p-3 m-3">
+							<label>Enter an Object: &nbsp </label><input type="text" name="arr2" id="objField2" placeholder="">
+							<label>Enter an Object from which you want to delete: &nbsp </label><input type="text" name="arr2" id="objField3" placeholder="">
+							<label>Enter a key: &nbsp </label><input type="text" name="arr2" id="objField4" placeholder="">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="deleteKeyFromObject()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoObject3"><a>Convert Object to uper and Lower case</a></h2>
+					<div id="demoObject3" class="collapse">
+						<h2 id="opObj3"></h2>
+						<div class="p-3 m-3">
+							<label>Enter an Object: &nbsp </label><input type="text" name="arr2" id="objField5" placeholder="">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="cnvtObjectLowerAndUperCase()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoObject4"><a>Value agains Key</a></h2>
+					<div id="demoObject4" class="collapse">
+						<h2 id="opObj4"></h2>
+						<div class="p-3 m-3">
+							<label>Enter an Object: &nbsp </label><input type="text" name="arr2" id="objField6" placeholder="">
+							<label>Enter a key: &nbsp </label><input type="text" name="arr2" id="objField7" placeholder="">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="valueAgainsKey()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
 		</div>
 	</div>
-
 </body>
 </html>
 <script src="getElements.js"></script>

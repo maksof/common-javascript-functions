@@ -1,11 +1,6 @@
 function setDateDDMM() {
 	var curDate = document.getElementById("datepick1").value;
 	var dateArray = curDate.split('-');
-	checkArrayEmptyOrNot();
-	deleteArrayRec();
-	deleteMultipleRecFromArray();
-	MergeArray();
-	IntersectTwoArray();
 	var value1 = dateFormatSlashDDMM(dateArray);
 	document.getElementById("op1").innerHTML = value1;
 }
@@ -119,11 +114,11 @@ function MergeTwoArray() {
 
 function intersectArray() {
 	var curData = document.getElementById("arrayfield8").value;
-	var dataArray = curData.split(',');
+	var dataArray = JSON.parse(curData);
 	var curData2 = document.getElementById("arrayfield9").value;
-	var dataArray2 = curData2.split(',');
+	var dataArray2 = JSON.parse(curData2);
 	var displayArray = IntersectTwoArray(dataArray,dataArray2);
-	document.getElementById("opArray5").innerHTML = displayArray;
+	document.getElementById("opArray5").innerHTML = JSON.stringify(displayArray);
 }
 
 function delMultiRecbyIndex() {
@@ -185,4 +180,40 @@ function arrayShuffle() {
 	var dataArray = curData.split(',');
 	var displayArray = arrayShuffligFunc(dataArray);
 	document.getElementById("opArray13").innerHTML = displayArray;	
+}
+
+function objEmptOrNot() {
+	var curData = document.getElementById("objField1").value;
+	if(curData=='') document.getElementById("opObj1").innerHTML = "can not be null";
+	else{
+		var dataArray = JSON.parse(curData);
+		var displayArray = objectEmptyOrNot(dataArray);
+		document.getElementById("opObj1").innerHTML = displayArray;	
+	}
+}
+
+function deleteKeyFromObject() {
+	var curData1 = document.getElementById("objField2").value;
+	var dataArray1 = JSON.parse(curData1);
+	var curData2 = document.getElementById("objField3").value;
+	var dataArray2 = JSON.parse(curData2);
+	var curData3 = document.getElementById("objField4").value;
+	var dataArray3 = curData3;
+	var displayArray = deleteKeyFromObj(dataArray1,dataArray2,dataArray3);
+	document.getElementById("opObj2").innerHTML = JSON.stringify(displayArray);		
+}
+
+function cnvtObjectLowerAndUperCase() {
+	var curData = document.getElementById("objField5").value;
+	var dataArray = JSON.parse(curData);
+	var displayArray = convertObjectToUperAndLowerCaseFunc(dataArray);
+	document.getElementById("opObj3").innerHTML = displayArray;	
+}
+
+function valueAgainsKey() {
+	var curData = document.getElementById("objField6").value;
+	var dataArray = JSON.parse(curData);
+	var curData = document.getElementById("objField7").value;
+	var displayArray = valueAgainstKeyFunc(dataArray,curData);
+	document.getElementById("opObj4").innerHTML = JSON.stringify(displayArray);		
 }
