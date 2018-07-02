@@ -79,14 +79,11 @@ function dateFormat(c) {
 
 function checkArrayEmptyOrNot(array) {
 	if (array === 'undefined' || array.length == 0||(array[0]=="")) return true;
-	else return false;}
+	else return false;
+}
 
 	function deleteArrayRec(array, delIndex) {
-		arr=[];
-		for(var i=0;i<array.length;i++){
-			if(array[i]==delIndex) continue;
-			else arr.push(array[i]);
-		}
+		array.splice(delIndex,delIndex+1);
 		return arr;
 	}
 
