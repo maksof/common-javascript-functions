@@ -83,13 +83,18 @@ function checkArrayEmptyOrNot(array) {
 }
 
 	function deleteArrayRec(array, delIndex) {
-		array.splice(delIndex,delIndex+1);
-		return arr;
+		console.log(array);
+		console.log(delIndex);
+		array.splice(delIndex,1);
+		return array;
 	}
 
 	function deleteMultipleRecFromArray(array, delIndex) {
-		for(var i=0; i<array.length; i++){
+		console.log(array);
+		console.log(delIndex);
+
 			for(var j=0;j<delIndex.length;j++){
+		for(var i=0; i<array.length; i++){
 				if(array[i]==delIndex[j]) {
 					array.splice(i,1);
 				}

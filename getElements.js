@@ -92,18 +92,17 @@ function checkArrayEmpOrNt() {
 
 function DelArrayRec() {
 	var curData = document.getElementById("arrayfield2").value;
-	var dataArray = curData.split(',');
 	var curData2 = document.getElementById("arrayfield3").value;
-	var displayArray = deleteArrayRec(dataArray,curData2);
+	var displayArray = deleteArrayRec(JSON.parse(curData),curData2);
 	document.getElementById("opArray2").innerHTML = displayArray;
 }
 
 function delMultiRec() {
 	var curData = document.getElementById("arrayfield4").value;
-	var dataArray = curData.split(',');
+	// var dataArray = curData.split(',');
 	var curData2 = document.getElementById("arrayfield5").value;
 	var dataArray2 = curData2.split(',');
-	var displayArray = deleteMultipleRecFromArray(dataArray,dataArray2);
+	var displayArray = deleteMultipleRecFromArray(JSON.parse(curData),dataArray2);
 	document.getElementById("opArray3").innerHTML = displayArray;
 }
 
