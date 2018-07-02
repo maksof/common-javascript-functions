@@ -25,6 +25,8 @@
 			<p>This project contains the common javascript functions mostly used in all the project.</p>
 		</div>
 		<br>
+
+		<h1 style="margin-left: 5px;">Date Functions</h1>
 		<div class="row p-3 m-3">
 			<div class="col-12">
 				<div class="card" style="cursor: pointer;">
@@ -33,157 +35,414 @@
 						<h2 id="op1"></h2>
 						<div class="p-3 m-3">
 							<input type="date" id="datepick1">
-						<br><br>
-						<button type="button" class="btn btn-primary" onclick="setDateDDMM()">submit</button>
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="setDateDDMM()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demo2"><a>mm/dd/yyyy Formate</a></h2>
+					<div id="demo2" class="collapse">
+						<h2 id="op2"></h2>
+						<div class="p-3 m-3">
+							<input type="date" id="datepick2">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="setDateMMDD()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demo3"><a>dd-mm-yyyy Formate</a></h2>
+					<div id="demo3" class="collapse">
+						<h2 id="op3"></h2>
+						<div class="p-3 m-3">
+							<input type="date" id="datepick3">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="setDateDDMMdash()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demo4"><a>mm-dd-yyyy Formate</a></h2>
+					<div id="demo4" class="collapse">
+						<h2 id="op4"></h2>
+						<div class="p-3 m-3">
+							<input type="date" id="datepick4">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="setDateMMDDdash()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demo5"><a>day-mm-yyyy Formate</a></h2>
+					<div id="demo5" class="collapse">
+						<h2 id="op5"></h2>
+						<div class="p-3 m-3">
+							<input type="date" id="datepick5">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="setDateMonthNameWiseDD()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demo6"><a>dd-month-yyyy Formate</a></h2>
+					<div id="demo6" class="collapse">
+						<h2 id="op6"></h2>
+						<div class="p-3 m-3">
+							<input type="date" id="datepick6">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="setDateMonthNameWiseMM()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demo7"><a>day-month-yyyy Formate</a></h2>
+					<div id="demo7" class="collapse">
+						<h2 id="op7"></h2>
+						<div class="p-3 m-3">
+							<input type="date" id="datepick7">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="setDateMonthNameWise()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demo14"><a>dayName-month-yyyy Formate</a></h2>
+					<div id="demo14" class="collapse">
+						<h2 id="op14"></h2>
+						<div class="p-3 m-3">
+							<input type="date" id="datepick14">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="dayNameWithMonthName()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demo8"><a>Calculate Day Difference</a></h2>
+					<div id="demo8" class="collapse">
+						<h2 id="diffOfDate"></h2>
+						<div class="p-3 m-3">
+							<label>Enter First Date: &nbsp</label> <input type="date" id="datepick8">
+							<label>&nbsp Enter Second Date: &nbsp</label>	<input type="date" id="datepick11">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="dayDifference()">Calculate</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demo9"><a>Calculate Month difference</a></h2>
+					<div id="demo9" class="collapse">
+						<h2 id="diffOfMonth"></h2>
+						<div class="p-3 m-3">
+							<label>Enter First Date: &nbsp</label><input type="date" id="datepick9">
+							<label>&nbsp Enter Second Date: &nbsp</label><input type="date" id="datepick12">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="monthDifference()">Calculate</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demo10"><a>Calculate year Difference</a></h2>
+					<div id="demo10" class="collapse">
+						<h2 id="diffOfYear"></h2>
+						<div class="p-3 m-3">
+							<label>Enter First Date: &nbsp</label><input type="date" id="datepick10">
+							<label>&nbsp Enter Second Date: &nbsp</label><input type="date" id="datepick13"> 
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="yearDifference()">Calculate</button>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div>
+		<h1 style="margin-left: 15px;">Array Functions</h1>
+		<div class="row p-3 m-3">
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoarray1"><a>Check Array is Empty or not</a></h2>
+					<div id="demoarray1" class="collapse">
+						<h2 id="opArray1"></h2>
+						<div class="p-3 m-3">
+							<label>Enter an Array:&nbsp </label><input type="text" name="arr1" id="arrayfield1" placeholder="1,2,3,4">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="checkArrayEmpOrNt()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-		<div class="col-12">
-			<div class="card" style="cursor: pointer;">
-				<h2 class="card-title" data-toggle="collapse" data-target="#demo2"><a>mm/dd/yyyy Formate</a></h2>
-				<div id="demo2" class="collapse">
-					<h2 id="op2"></h2>
-					<div class="p-3 m-3">
-						<input type="date" id="datepick2">
-					<br><br>
-					<button type="button" class="btn btn-primary" onclick="setDateMMDD()">submit</button>
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoarray2"><a>Delete one Record from Index</a></h2>
+					<div id="demoarray2" class="collapse">
+						<h2 id="opArray2"></h2>
+						<div class="p-3 m-3">
+							<label>Enter Array Value by Comma Seprated: &nbsp </label><input type="text" name="arr2" id="arrayfield2" placeholder="1,2,3,4">
+							<label>&nbsp Enter Index which you want to delete:&nbsp </label><input type="text" name="arr3" id="arrayfield3" placeholder="1">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="DelArrayRec()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoarray3"><a>Delete Multiple Records by value</a></h2>
+					<div id="demoarray3" class="collapse">
+						<h2 id="opArray3"></h2>
+						<div class="p-3 m-3">
+							<label>Enter Array Value by Comma Seprated: &nbsp </label><input type="text" name="arr2" id="arrayfield4" placeholder="1,2,3,4">
+							<label>&nbsp Enter same value which you want to delete:&nbsp </label><input type="text" name="arr3" id="arrayfield5" placeholder="1,2,3,4">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="delMultiRec()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoarray4"><a>Merge Two Arrays</a></h2>
+					<div id="demoarray4" class="collapse">
+						<h2 id="opArray4"></h2>
+						<div class="p-3 m-3">
+							<label>Enter Array Value by Comma Seprated: &nbsp </label><input type="text" name="arr2" id="arrayfield6" placeholder="Enter Object">
+							<label>&nbsp Enter second Array Value by Comma Seprated:&nbsp </label><input type="text" name="arr3" id="arrayfield7" placeholder="Enter second Object">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="MergeTwoArray()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoarray5"><a>Print Intersect values from two Arrays(common)</a></h2>
+					<div id="demoarray5" class="collapse">
+						<h2 id="opArray5"></h2>
+						<div class="p-3 m-3">
+							<label>Enter Array Value by Comma Seprated: &nbsp </label><input type="text" name="arr2" id="arrayfield8" placeholder="Enter an object">
+							<label>&nbsp Enter second Array Value by Comma Seprated:&nbsp </label><input type="text" name="arr3" id="arrayfield9" placeholder="Enter an object">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="intersectArray()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoarray6"><a>Delete Multiple Records by Index</a></h2>
+					<div id="demoarray6" class="collapse">
+						<h2 id="opArray6"></h2>
+						<div class="p-3 m-3">
+							<label>Enter Array object: &nbsp </label><input type="text" name="arr2" id="arrayfield10" placeholder="1,2,3,4">
+							<label>&nbsp Enter Index by comma seprated which you want to delete:&nbsp </label><input type="text" name="arr3" id="arrayfield11" placeholder="1,2,3,4">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="delMultiRecbyIndex()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoarray7"><a>Delete Multiple Records by Object Value</a></h2>
+					<div id="demoarray7" class="collapse">
+						<h2 id="opArray7"></h2>
+						<div class="p-3 m-3">
+							<label>Enter Array object: &nbsp </label><input type="text" name="arr2" id="arrayfield12" placeholder="1,2,3,4">
+							<label>&nbsp Enter object value:&nbsp </label><input type="text" name="arr3" id="arrayfield13" placeholder="1,2,3,4">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="delMultiRecbyValues()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoarray8"><a>Max value from Array</a></h2>
+					<div id="demoarray8" class="collapse">
+						<h2 id="opArray8"></h2>
+						<div class="p-3 m-3">
+							<label>Enter Array Value by Comma Seprated: &nbsp </label><input type="text" name="arr2" id="arrayfield14" placeholder="1,2,3,4">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="maxArrayVales()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoarray9"><a>Min value from Array</a></h2>
+					<div id="demoarray9" class="collapse">
+						<h2 id="opArray9"></h2>
+						<div class="p-3 m-3">
+							<label>Enter Array Value by Comma Seprated: &nbsp </label><input type="text" name="arr2" id="arrayfield15" placeholder="1,2,3,4">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="minArrayVales()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoarray10"><a>sum up quantity of same id from an object</a></h2>
+					<div id="demoarray10" class="collapse">
+						<h2 id="opArray10"></h2>
+						<div class="p-3 m-3">
+							<label>Enter Array object: &nbsp </label><input type="text" name="arr2" id="arrayfield16" placeholder="1,2,3,4">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="sumUpQuantitySameId()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoarray11"><a>sum up Quantity by providing id</a></h2>
+					<div id="demoarray11" class="collapse">
+						<h2 id="opArray11"></h2>
+						<div class="p-3 m-3">
+							<label>Enter array object: &nbsp </label><input type="text" name="arr2" id="arrayfield17" placeholder="1,2,3,4">
+							<label>Enter id: &nbsp </label><input type="text" name="arr2" id="arrayfield18" placeholder="1,2,3,4">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="sumUpQuantityByProvidingId()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoarray12"><a>Return Object by providing id</a></h2>
+					<div id="demoarray12" class="collapse">
+						<h2 id="opArray12"></h2>
+						<div class="p-3 m-3">
+							<label>Enter object: &nbsp </label><input type="text" name="arr2" id="arrayfield19" placeholder="1,2,3,4">
+							<label>Enter id:&nbsp </label><input type="text" name="arr2" id="arrayfield20" placeholder="1,2,3,4">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="findObjByGivenId()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoarray13"><a>Array Shuffling</a></h2>
+					<div id="demoarray13" class="collapse">
+						<h2 id="opArray13"></h2>
+						<div class="p-3 m-3">
+							<label>Enter integer Value by Comma Seprated: &nbsp </label><input type="text" name="arr2" id="arrayfield21" placeholder="1,2,3,4">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="arrayShuffle()">submit</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="col-12">
-		<div class="card" style="cursor: pointer;">
-			<h2 class="card-title" data-toggle="collapse" data-target="#demo3"><a>dd-mm-yyyy Formate</a></h2>
-			<div id="demo3" class="collapse">
-				<h2 id="op3"></h2>
-				<div class="p-3 m-3">
-					<input type="date" id="datepick3">
-				<br><br>
-				<button type="button" class="btn btn-primary" onclick="setDateDDMMdash()">submit</button>
+		<h1 style="margin-left: 15px;">Objects Operation Functions</h1>
+		<div class="row p-3 m-3">
+			
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoObject1"><a>Check Object Empty or Not</a></h2>
+					<div id="demoObject1" class="collapse">
+						<h2 id="opObj1"></h2>
+						<div class="p-3 m-3">
+							<label>Enter an Object: &nbsp </label><input type="text" name="arr2" id="objField1" placeholder="">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="objEmptOrNot()">submit</button>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-</div>
 
-<div class="col-12">
-	<div class="card" style="cursor: pointer;">
-		<h2 class="card-title" data-toggle="collapse" data-target="#demo4"><a>mm-dd-yyyy Formate</a></h2>
-		<div id="demo4" class="collapse">
-			<h2 id="op4"></h2>
-			<div class="p-3 m-3">
-				<input type="date" id="datepick4">
-			<br><br>
-			<button type="button" class="btn btn-primary" onclick="setDateMMDDdash()">submit</button>
-		</div>
-	</div>
-</div>
-</div>
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoObject2"><a>Delete an object by object key</a></h2>
+					<div id="demoObject2" class="collapse">
+						<h2 id="opObj2"></h2>
+						<div class="p-3 m-3">
+							<label>Enter an Object: &nbsp </label><input type="text" name="arr2" id="objField2" placeholder="">
+							<label>Enter an Object from which you want to delete: &nbsp </label><input type="text" name="arr2" id="objField3" placeholder="">
+							<label>Enter a key: &nbsp </label><input type="text" name="arr2" id="objField4" placeholder="">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="deleteKeyFromObject()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-<div class="col-12">
-	<div class="card" style="cursor: pointer;">
-		<h2 class="card-title" data-toggle="collapse" data-target="#demo5"><a>day-mm-yyyy Formate</a></h2>
-		<div id="demo5" class="collapse">
-			<h2 id="op5"></h2>
-			<div class="p-3 m-3">
-				<input type="date" id="datepick5">
-			<br><br>
-			<button type="button" class="btn btn-primary" onclick="setDateMonthNameWiseDD()">submit</button>
-		</div>
-	</div>
-</div>
-</div>
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoObject3"><a>Convert Object to uper and Lower case</a></h2>
+					<div id="demoObject3" class="collapse">
+						<h2 id="opObj3"></h2>
+						<div class="p-3 m-3">
+							<label>Enter an Object: &nbsp </label><input type="text" name="arr2" id="objField5" placeholder="">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="cnvtObjectLowerAndUperCase()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-<div class="col-12">
-	<div class="card" style="cursor: pointer;">
-		<h2 class="card-title" data-toggle="collapse" data-target="#demo6"><a>dd-month-yyyy Formate</a></h2>
-		<div id="demo6" class="collapse">
-			<h2 id="op6"></h2>
-			<div class="p-3 m-3">
-				<input type="date" id="datepick6">
-			<br><br>
-			<button type="button" class="btn btn-primary" onclick="setDateMonthNameWiseMM()">submit</button>
-		</div>
-	</div>
-</div>
-</div>
+			<div class="col-12">
+				<div class="card" style="cursor: pointer;">
+					<h2 class="card-title" data-toggle="collapse" data-target="#demoObject4"><a>Value agains Key</a></h2>
+					<div id="demoObject4" class="collapse">
+						<h2 id="opObj4"></h2>
+						<div class="p-3 m-3">
+							<label>Enter an Object: &nbsp </label><input type="text" name="arr2" id="objField6" placeholder="">
+							<label>Enter a key: &nbsp </label><input type="text" name="arr2" id="objField7" placeholder="">
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="valueAgainsKey()">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-<div class="col-12">
-	<div class="card" style="cursor: pointer;">
-		<h2 class="card-title" data-toggle="collapse" data-target="#demo7"><a>day-month-yyyy Formate</a></h2>
-		<div id="demo7" class="collapse">
-			<h2 id="op7"></h2>
-			<div class="p-3 m-3">
-				<input type="date" id="datepick7">
-			<br><br>
-			<button type="button" class="btn btn-primary" onclick="setDateMonthNameWise()">submit</button>
 		</div>
 	</div>
-</div>
-</div>
-
-<div class="col-12">
-	<div class="card" style="cursor: pointer;">
-		<h2 class="card-title" data-toggle="collapse" data-target="#demo14"><a>dayName-month-yyyy Formate</a></h2>
-		<div id="demo14" class="collapse">
-			<h2 id="op14"></h2>
-			<div class="p-3 m-3">
-				<input type="date" id="datepick14">
-			<br><br>
-			<button type="button" class="btn btn-primary" onclick="dayNameWithMonthName()">submit</button>
-		</div>
-	</div>
-</div>
-</div>
-
-<div class="col-12">
-	<div class="card" style="cursor: pointer;">
-		<h2 class="card-title" data-toggle="collapse" data-target="#demo8"><a>Calculate Day Difference</a></h2>
-		<div id="demo8" class="collapse">
-			<h2 id="diffOfDate"></h2>
-			<div class="p-3 m-3">
-				<label>Enter First Date: &nbsp</label> <input type="date" id="datepick8">
-			<label>&nbsp Enter Second Date: &nbsp</label>	<input type="date" id="datepick11">
-			<br><br>
-			<button type="button" class="btn btn-primary" onclick="dayDifference()">Calculate</button>
-		</div>
-	</div>
-</div>
-</div>
-
-<div class="col-12">
-	<div class="card" style="cursor: pointer;">
-		<h2 class="card-title" data-toggle="collapse" data-target="#demo9"><a>Calculate Month difference</a></h2>
-		<div id="demo9" class="collapse">
-			<h2 id="diffOfMonth"></h2>
-			<div class="p-3 m-3">
-				<label>Enter First Date: &nbsp</label><input type="date" id="datepick9">
-				<label>&nbsp Enter Second Date: &nbsp</label><input type="date" id="datepick12">
-			<br><br>
-			<button type="button" class="btn btn-primary" onclick="monthDifference()">Calculate</button>
-		</div>
-	</div>
-</div>
-</div>
-
-<div class="col-12">
-	<div class="card" style="cursor: pointer;">
-		<h2 class="card-title" data-toggle="collapse" data-target="#demo10"><a>Calculate year Difference</a></h2>
-		<div id="demo10" class="collapse">
-			<h2 id="diffOfYear"></h2>
-			<div class="p-3 m-3">
-				<label>Enter First Date: &nbsp</label><input type="date" id="datepick10">
-				<label>&nbsp Enter Second Date: &nbsp</label><input type="date" id="datepick13"> 
-			<br><br>
-			<button type="button" class="btn btn-primary" onclick="yearDifference()">Calculate</button>
-		</div>
-	</div>
-</div>
-</div>
-</div>
-</div>
 </body>
 </html>
 <script src="getElements.js"></script>
