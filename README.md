@@ -17,8 +17,8 @@ In order to use function you have to create a variable and require module to it 
 Some function samples from following classes are as follow
 like this,
 ````
-**const common = requires('maksof-common');
-common.requiredFuncton();**
+**const common = requires('maksof-common');**
+**common.requiredFuncton();**
 
 # data-extractor
 
