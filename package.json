@@ -1,0 +1,51 @@
+{
+  "_from": "maksof-common",
+  "_id": "maksof-common@0.0.12",
+  "_inBundle": false,
+  "_integrity": "sha512-X3YGcZWQ7/nWVyL2DxepW2gS+Arylz08jtRQa9bVQrGE5T1u/IyyQnAhGHOWYH09lKhmpyW7XQp13hWs4JA+ew==",
+  "_location": "/maksof-common",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "maksof-common",
+    "name": "maksof-common",
+    "escapedName": "maksof-common",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/maksof-common/-/maksof-common-0.0.12.tgz",
+  "_shasum": "e30591ab8261ba115284aedc15f3bac1ffdf9e27",
+  "_spec": "maksof-common",
+  "_where": "C:\\www\\ok",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/maksof/maksof-common/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "- [Install](#install)\r - [data-extractor](#data-extractor)\r - [date-formatter](#date-formatter)\r - [field-validator](#field-validator)\r - [numerical-calculator](#numerical-calculator)",
+  "homepage": "https://github.com/maksof/maksof-common#readme",
+  "keywords": [
+    "maksof-common",
+    "maksofcommon",
+    "common-library",
+    "maksof-common-lirary"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "maksof-common",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maksof/maksof-common.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.12"
+}
