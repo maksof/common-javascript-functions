@@ -29,7 +29,7 @@
   },
   "bundleDependencies": false,
   "deprecated": false,
-  "description": "This repository contains the common javascript functions mostly used in all the project",
+  "description": "- [Install](#install)\r - [data-extractor](#data-extractor)\r - [date-formatter](#date-formatter)\r - [field-validator](#field-validator)\r - [numerical-calculator](#numerical-calculator)",
   "homepage": "https://github.com/maksof/maksof-common#readme",
   "keywords": [
     "maksof-common",
@@ -47,5 +47,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.16"
+  "version": "0.0.12"
 }
