@@ -474,6 +474,24 @@ module.exports ={
             return str;
         }
     },
+    getIstTime(offset){
+        d = new Date();
+        utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+        nd = new Date(utc + (3600000 * offset));
+        return nd.getTime();
+    },
+    setExpireTime(minute){
+        var time = 5.5 + minute / 60 / 60;
+        return common.getIstTime(time);
+    },
+    getNextDate(day){
+        var newDate = new Date(new Date().getTime()+(day*24*60*60*1000));
+        return newDate
+    },
+    setExpireTime(minute){
+        var time = 5.5 + minute / 60 / 60;
+        return common.getIstTime(time);
+    },
     printDateFormatter(){
         return "date-Formatter";
     }

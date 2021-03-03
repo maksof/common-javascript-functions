@@ -82,6 +82,86 @@ module.exports ={
     sortDataRev(data){
         return data.reverse();
     },
+    getCertificateKey(){
+        var characters = 'ZYXWVUTSRQPONMLKJIHGFEDCBAabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ9876543210zyxwvutsrqponmlkjihgfedcba';
+        var profileKey = '';
+        var max = characters.length - 1;
+        var sepIndex = [8, 13, 18, 23];
+        for (var i = 0; i < 36; i++) {
+            if(sepIndex.indexOf(i) != -1) profileKey += '-';
+            else profileKey += characters[Math.floor(Math.random() * max) + 1];
+        }
+        return profileKey;
+    },
+    get(data){
+        var newData = [];
+        data.forEach(d=>{
+            newData.push(d.dataValues) 
+        })
+        return newData;
+    },
+
+    sendResponseBack(res, status, message, data) {
+        var responseJson = {};
+        responseJson.status = status;
+        responseJson.message = message;
+        if(data) responseJson.data = data;
+        res.send(responseJson);
+    },
+    generateBluffId(){
+        var characters = 'ZYXWVUTSRQPONMLKJIHGFEDCBAabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ9876543210zyxwvutsrqponmlkjihgfedcba';
+        var token = '';
+        var max = characters.length - 1;
+        for (var i = 0; i < 32; i++) {
+            token += characters[Math.floor(Math.random() * max) + 1];
+        }
+        return token;
+    },
+    generatekey(){
+        var characters = 'ZYXWVUTSRQPONMLKJIHGFEDCBA0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ9876543210';
+        var key = '';
+        var max = characters.length - 1;
+        for (var i = 0; i < 266; i++) {
+            key += characters[Math.floor(Math.random() * max) + 1];
+        }
+        return key;
+    },
+    generateUniqueProfileKey(){
+        var characters = 'ZYXWVUTSRQPONMLKJIHGFEDCBAabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ9876543210zyxwvutsrqponmlkjihgfedcba';
+        var profileKey = '';
+        var max = characters.length - 1;
+        var sepIndex = [8, 13, 18, 23];
+        for (var i = 0; i < 36; i++) {
+            if(sepIndex.indexOf(i) != -1) profileKey += '-';
+            else profileKey += characters[Math.floor(Math.random() * max) + 1];
+        }
+        return profileKey;
+    },
+    async sendEmail(email, subject, message, response, action , tokenId) {
+
+        let transporter = nodemailer.createTransport({
+            host: config.smtp.host,
+            port: 465,
+            secure: true,
+            auth: {
+              user: config.smtp.senderEmail, 
+              pass: config.smtp.contactEmailPassword,
+            },
+            tls: {
+                rejectUnauthorized: false,
+              },
+          });
+        transporter.sendMail({
+            from: "<"+config.smtp.senderEmail+">",
+            to: email, 
+            subject: subject,
+            html: message,
+            },(err,result)=>{
+                if(err) console.log(err)
+                else if(action == 'SIGN_UP') {common.sendResponseBack(response, 'OK', 'A verification email is sent to your email address. Please activate your account to get started.', null);}
+                else if(action == 'SIGN_UP_LINKEDIN') {common.sendResponseBack(response, 'OK', 'Your account is successfully created with Linked In.', tokenId);}
+            });
+    },
     printDataExtractor(){
         return'data-Extractor';
     }  

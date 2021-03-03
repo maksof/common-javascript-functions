@@ -74,6 +74,10 @@ module.exports= {
            }
            return typeof(val1) === typeof(val2);
     },
+    checkValidUsername(username){
+        if(/^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$/.test(username)) return true
+        else return false
+    },
     printFieldValidator(){
         return "Field-Validator";
     }
