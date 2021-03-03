@@ -38,7 +38,41 @@ like this,
 - [sortNumDes](#sort-num-des)
 - [sortData](#sort-data)
 - [sortDataRev](#sort-data-rev)
+- [getCertificateKey](#get-certificate-key)
+- [ sendResponseBack](#send-response-back)
+- [generateBluffId](#generate-bluff-Id)
+- [generatekey](#generate-key)
+- [generateUniqueProfileKey](#generate-unique-profilekey)
+- [sendEmail](#send-email)
 
+## get-certificate-key
+```javascript
+const common = requires('maksof-common');
+common.getCertificateKey()
+```
+## send-response-back
+```javascript
+const common = requires('maksof-common');
+common.sendResponseBack(res, status, message, data)
+```
+## generate-bluff-Id
+```javascript
+const common = requires('maksof-common');
+ common.generateBluffId()
+```
+## generate-key
+```javascript
+ generatekey()
+```
+## generate-unique-profilekey
+```javascript
+generateUniqueProfileKey()
+```
+## send-email
+```javascript
+sendEmail(email, subject, message, response, action , tokenId)
+
+```
 ## del-from-array
 ```javascript
 const common = requires('maksof-common');
@@ -218,7 +252,10 @@ dayLongDateMonthYear ("Monday, 22 February 2021")
 - [MonthShortDateYearShort_d (dateString)](#MonthShortDateYearShort_d)
 - [dayMonthYear_HH_MM_24 (dateString)](#dayMonthYear_HH_MM_24)
 - [dayMonthYear_HH_MM_12 (dateString)](#dayMonthYear_HH_MM_12)
-
+- [getIstTime(offset)](#getIstTime)
+- [setExpireTime(minute)](#setExpireTime)
+- [getNextDate(day)](#getNextDate)
+- [setExpireTime(minute)](#setExpireTime)
 
 # field-validator
 - [isEmpty](#is-empty)
@@ -238,6 +275,7 @@ dayLongDateMonthYear ("Monday, 22 February 2021")
 - [isNumber](#is-number)
 - [isJSON](#is-JSON)
 - [isSameType](#is-same-type)
+- [checkValidUsername(username)](#check-valid-username)
 
 ## is-empty
 ```javascript
@@ -320,6 +358,10 @@ isJSON(value);
 ## is-same-type
 ```javascript
 isSameType(val1, val2);
+```
+## check-valid-username
+```javascript
+checkValidUsername(username)
 ```
 # numerical-calculator
 -[percentage (output,input)](#percentage)

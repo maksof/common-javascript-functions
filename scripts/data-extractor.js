@@ -93,13 +93,6 @@ module.exports ={
         }
         return profileKey;
     },
-    get(data){
-        var newData = [];
-        data.forEach(d=>{
-            newData.push(d.dataValues) 
-        })
-        return newData;
-    },
 
     sendResponseBack(res, status, message, data) {
         var responseJson = {};
