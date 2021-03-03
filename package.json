@@ -1,8 +1,8 @@
 {
   "_from": "maksof-common",
-  "_id": "maksof-common@0.0.12",
+  "_id": "maksof-common@0.0.15",
   "_inBundle": false,
-  "_integrity": "sha512-X3YGcZWQ7/nWVyL2DxepW2gS+Arylz08jtRQa9bVQrGE5T1u/IyyQnAhGHOWYH09lKhmpyW7XQp13hWs4JA+ew==",
+  "_integrity": "sha512-kgxHYbF+0KBrePvCm5EmCQ/j1TW4xgS3J1az8Uq2J6ifmBddHtBMc+kc7Jc+QE9pNgrQDrjZXKLrECm3UkHkBw==",
   "_location": "/maksof-common",
   "_phantomChildren": {},
   "_requested": {
@@ -19,17 +19,17 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/maksof-common/-/maksof-common-0.0.12.tgz",
-  "_shasum": "e30591ab8261ba115284aedc15f3bac1ffdf9e27",
+  "_resolved": "https://registry.npmjs.org/maksof-common/-/maksof-common-0.0.15.tgz",
+  "_shasum": "67a8e3f5d8002d6e61780111ccb64db0413b56d9",
   "_spec": "maksof-common",
-  "_where": "C:\\www\\ok",
+  "_where": "C:\\www\\maksof-common\\New folder",
   "author": "",
   "bugs": {
     "url": "https://github.com/maksof/maksof-common/issues"
   },
   "bundleDependencies": false,
   "deprecated": false,
-  "description": "- [Install](#install)\r - [data-extractor](#data-extractor)\r - [date-formatter](#date-formatter)\r - [field-validator](#field-validator)\r - [numerical-calculator](#numerical-calculator)",
+  "description": "This repository contains the common javascript functions mostly used in all the project",
   "homepage": "https://github.com/maksof/maksof-common#readme",
   "keywords": [
     "maksof-common",
@@ -47,5 +47,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.12"
+  "version": "0.0.15"
 }
