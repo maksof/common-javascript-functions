@@ -13,9 +13,11 @@ module.exports ={
         breakedDateObj.dayName = dateString.getDay();
         var temp = dateString.getDate();
         breakedDateObj.dateZero = temp < 10 ? ("0" + temp) : temp;
+        breakedDateObj.date=temp;
 
         temp = dateString.getMonth()+1;
         breakedDateObj.monthZero = temp < 10 ? ("0" + temp) : temp;
+        breakedDateObj.month=temp;
 
         breakedDateObj.year = dateString.getFullYear();
         breakedDateObj.yearShort = breakedDateObj.year.toString().substr(-2);
@@ -379,7 +381,7 @@ module.exports ={
     },
     formatYMDHMS24(dateString){
         var dObj=this.getDate(dateString);
-        var str=dObj.year +"-"+this.monthListShort[dObj.month]+"-"+dObj.date+" "+dObj.hour+":"+dObj.minute+":"+dObj.second;
+        var str=dObj.year +"-"+dObj.monthZero+"-"+dObj.date+" "+dObj.hour+":"+dObj.minute+":"+dObj.second;
         return str;
     },
     getIstTime(offset){
