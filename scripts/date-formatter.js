@@ -377,7 +377,7 @@ module.exports ={
             return str;
         }
     },
-    formatYDMHMS24(dateString){
+    formatYMDHMS24(dateString){
         var dObj=this.getDate(dateString);
         var str=dObj.year +"-"+this.monthListShort[dObj.month]+"-"+dObj.date+" "+dObj.hour+":"+dObj.minute+":"+dObj.second;
         return str;
