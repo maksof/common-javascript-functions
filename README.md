@@ -67,11 +67,6 @@ const common = requires('maksof-common');
 ```javascript
 generateUniqueProfileKey()
 ```
-## send-email
-```javascript
-sendEmail(email, subject, message, response, action , tokenId)
-
-```
 ## del-from-array
 ```javascript
 const common = requires('maksof-common');
@@ -219,9 +214,9 @@ formatFullDayNameDMY("Monday, 22 February 2021")
 - [formatDotYMD (dateString)](#formatDotYMD)
 - [formatDotDMY (dateString)](#formatDotDMY)
 - [formatDotMDY (dateString)](#formatDotMDY)
-- - [formatShortMonthDMYHM24(dateString)](#formatShortMonthDMYHM24)
+- [formatShortMonthDMYHM24(dateString)](#formatShortMonthDMYHM24)
 - [formatShortMonthMDYHM12 (dateString)](#formatShortMonthMDYHM12)
-- [ formatYDMHMS24(dateString)](formatYDMHMS24)
+- [ formatYMDHMS24(dateString)](formatYDMHMS24)
 - [formatDotShortMonthYMD (dateString)](#formatDotShortMonthYMD)
 - [formatDotShortMonthDMY (dateString)](#formatDotShortMonthDMY)
 - [formatDotShortMonthMDY (dateString)](#formatDotShortMonthMDY)
