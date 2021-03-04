@@ -263,37 +263,37 @@ module.exports ={
         return str;
     },
     //38
-    yearMonthShortDate_d(dateString){
+    formatDotShortMonthYMD(dateString){
         var dObj=this.getDate(dateString);
         var str=dObj.year+"."+this.monthListShort[dObj.month]+"."+dObj.dateZero;
         return str;
     },
     // 39
-    dateMonthShortYear_d(dateString){
+    formatDotShortMonthDMY(dateString){
         var dObj=this.getDate(dateString);
         var str=dObj.dateZero+"."+this.monthListShort[dObj.month]+"."+dObj.year;
         return str;
     },
     // 40
-    monthShortDateYear_d(dateString){
+    formatDotShortMonthMDY(dateString){
         var dObj=this.getDate(dateString);
         var str=this.monthListShort[dObj.month]+"."+dObj.dateZero+"."+dObj.year;
         return str;
     },
     // 41
-    yearMonthLongtDate_d(dateString){
+    formatDotFullMonthYMD(dateString){
         var dObj=this.getDate(dateString);
         var str=dObj.year+"."+this.monthList[dObj.month]+"."+dObj.dateZero;
         return str;
     },
     // 42
-    dateMonthLongYear_d(dateString){
+    formatDotFullMonthDMY(dateString){
         var dObj=this.getDate(dateString);
         var str=dObj.dateZero+"."+this.monthList[dObj.month]+"."+dObj.year;
         return str;
     },
     // 43
-    monthLongDateYear_d(dateString){
+    formatDotFullMonthMDY(dateString){
         var dObj=this.getDate(dateString);
         var str=this.monthList[dObj.month]+"."+dObj.dateZero+"."+dObj.year;
         return str;
@@ -301,69 +301,69 @@ module.exports ={
     //46
     //Short Year
     //47
-    dateMontShortYearShort(dateString){
+    formatShortMonthYearDMY(dateString){
         var dObj=this.getDate(dateString);
         var str=dObj.dateZero+"-"+this.monthListShort[dObj.month]+"-"+dObj.yearShort;
         return str;
     },
     //48
-    yearShortMonthShortDate(dateString){
+    formatShortMonthYearYMD(dateString){
         var dObj=this.getDate(dateString);
         var str=dObj.yearShort+"-"+this.monthListShort[dObj.month]+"-"+dObj.dateZero;
         return str;
     },
     //49
-    MonthShortDateYearShort(dateString){
+    formatShortMonthYearMDY(dateString){
         var dObj=this.getDate(dateString);
         var str=this.monthListShort[dObj.month]+"-"+dObj.dateZero+"-"+dObj.yearShort;
         return str;
     },
     // slash seprate
     //53
-    dateMontShortYearShort_s(dateString){
+    formatSlashShortMonthYearDMY(dateString){
         var dObj=this.getDate(dateString);
         var str=dObj.dateZero+"/"+this.monthListShort[dObj.month]+"/"+dObj.yearShort;
         return str;
     },
     //54
-    yearShortMonthShortDate_s(dateString){
+    formatSlashShortMonthYearYMD(dateString){
         var dObj=this.getDate(dateString);
         var str=dObj.yearShort+"/"+this.monthListShort[dObj.month]+"/"+dObj.dateZero;
         return str;
     },
     //55
-    MonthShortDateYearShort_s(dateString){
+    formatSlashShortMonthYearMDY(dateString){
         var dObj=this.getDate(dateString);
         var str=this.monthListShort[dObj.month]+"/"+dObj.dateZero+"/"+dObj.yearShort;
         return str;
     },
     // dot seprate
     //56
-    dateMontShortYearShort_d(dateString){
+    formatDotShortMonthYearDMY(dateString){
         var dObj=this.getDate(dateString);
         var str=dObj.dateZero+"."+this.monthListShort[dObj.month]+"."+dObj.yearShort;
         return str;
     },
     //57
-    yearShortMonthShortDate_d(dateString){
+    formatDotShortMonthYearYMD(dateString){
         var dObj=this.getDate(dateString);
         var str=dObj.yearShort+"."+this.monthListShort[dObj.month]+"."+dObj.dateZero;
         return str;
     },
     //58
-    MonthShortDateYearShort_d(dateString){
+    formatDotShortMonthYearMDY(dateString){
         var dObj=this.getDate(dateString);
         var str=this.monthListShort[dObj.month]+"."+dObj.dateZero+"."+dObj.yearShort;
         return str;
     },
     //59
-    dateMonthShortYear_HH_MM_24(dateString){
+    formatShortMonthDMYHM24(dateString){
         var dObj=this.getDate(dateString);
         var str=dObj.date+"-"+this.monthListShort[dObj.month]+"-"+dObj.year+" "+dObj.hour+":"+dObj.minute;
         return str;
     },
     // 60
-    dateMonthShortYear_HH_MM_12(dateString){
+    formatShortMonthMDYHM12(dateString){
         var dObj=this.getDate(dateString);
         var temp=(dateString.search(/PM/i) != -1 || dateString.search(/AM/i) != -1);
         var str;
