@@ -474,6 +474,11 @@ module.exports ={
             return str;
         }
     },
+    YearMonthDate_HH_MM_24(dateString){
+        var dObj=this.getDate(dateString);
+        var str=dObj.year +"-"+this.monthListShort[dObj.month]+"-"+dObj.date+" "+dObj.hour+":"+dObj.minute+":"+dObj.second;
+        return str;
+    },
     getIstTime(offset){
         d = new Date();
         utc = d.getTime() + (d.getTimezoneOffset() * 60000);
