@@ -82,6 +82,53 @@ module.exports ={
     sortDataRev(data){
         return data.reverse();
     },
+    getCertificateKey(){
+        var characters = 'ZYXWVUTSRQPONMLKJIHGFEDCBAabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ9876543210zyxwvutsrqponmlkjihgfedcba';
+        var profileKey = '';
+        var max = characters.length - 1;
+        var sepIndex = [8, 13, 18, 23];
+        for (var i = 0; i < 36; i++) {
+            if(sepIndex.indexOf(i) != -1) profileKey += '-';
+            else profileKey += characters[Math.floor(Math.random() * max) + 1];
+        }
+        return profileKey;
+    },
+    sendResponseBack(res, status, message, data) {
+        var responseJson = {};
+        responseJson.status = status;
+        responseJson.message = message;
+        if(data) responseJson.data = data;
+        res.send(responseJson);
+    },
+    generateBluffId(){
+        var characters = 'ZYXWVUTSRQPONMLKJIHGFEDCBAabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ9876543210zyxwvutsrqponmlkjihgfedcba';
+        var token = '';
+        var max = characters.length - 1;
+        for (var i = 0; i < 32; i++) {
+            token += characters[Math.floor(Math.random() * max) + 1];
+        }
+        return token;
+    },
+    generateKey(){
+        var characters = 'ZYXWVUTSRQPONMLKJIHGFEDCBA0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ9876543210';
+        var key = '';
+        var max = characters.length - 1;
+        for (var i = 0; i < 266; i++) {
+            key += characters[Math.floor(Math.random() * max) + 1];
+        }
+        return key;
+    },
+    generateUniqueProfileKey(){
+        var characters = 'ZYXWVUTSRQPONMLKJIHGFEDCBAabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ9876543210zyxwvutsrqponmlkjihgfedcba';
+        var profileKey = '';
+        var max = characters.length - 1;
+        var sepIndex = [8, 13, 18, 23];
+        for (var i = 0; i < 36; i++) {
+            if(sepIndex.indexOf(i) != -1) profileKey += '-';
+            else profileKey += characters[Math.floor(Math.random() * max) + 1];
+        }
+        return profileKey;
+    },
     printDataExtractor(){
         return'data-Extractor';
     }  

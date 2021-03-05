@@ -35,10 +35,11 @@ module.exports= {
         return output;
     },
     isDate(date){
-        return (new Date(date) != "Invalid Date");
+        var output = (new Date(date) != "Invalid Date") ? true : false;
+        return output
     },
     isValidDob(dob){ 
-        var output = (this.dateExpression(dob)) ? (new Date(Date.now()) - new Date(dob) > 0) ? true : false : false;
+        var output = (this.isDate(dob)) ? (new Date(Date.now()) - new Date(dob) > 0) ? true : false : false;
         return output;
     },
     isArrayEmpty(array){
@@ -73,6 +74,10 @@ module.exports= {
             return this.isNaN(val1) === this.isNaN(val2);
            }
            return typeof(val1) === typeof(val2);
+    },
+    checkValidUsername(username){
+        if(/^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$/.test(username)) return true
+        else return false
     },
     printFieldValidator(){
         return "Field-Validator";

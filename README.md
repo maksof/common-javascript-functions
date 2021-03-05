@@ -17,8 +17,8 @@ In order to use function you have to create a variable and require module to it 
 Some function samples from following classes are as follow
 like this,
 ````
-**const common = requires('maksof-common');
-common.requiredFuncton();**
+**const common = requires('maksof-common');**
+**common.requiredFuncton();**
 
 # data-extractor
 
@@ -38,7 +38,35 @@ common.requiredFuncton();**
 - [sortNumDes](#sort-num-des)
 - [sortData](#sort-data)
 - [sortDataRev](#sort-data-rev)
+- [getCertificateKey](#get-certificate-key)
+- [ sendResponseBack](#send-response-back)
+- [generateBluffId](#generate-bluff-Id)
+- [generatekey](#generate-key)
+- [generateUniqueProfileKey](#generate-unique-profilekey)
 
+## get-certificate-key
+```javascript
+const common = requires('maksof-common');
+common.getCertificateKey()
+```
+## send-response-back
+```javascript
+const common = requires('maksof-common');
+common.sendResponseBack(res, status, message, data)
+```
+## generate-bluff-Id
+```javascript
+const common = requires('maksof-common');
+ common.generateBluffId()
+```
+## generate-key
+```javascript
+ generatekey()
+```
+## generate-unique-profilekey
+```javascript
+generateUniqueProfileKey()
+```
 ## del-from-array
 ```javascript
 const common = requires('maksof-common');
@@ -149,76 +177,65 @@ const common = requires('maksof-common');
 commom.dateStatement (dateString);
 ```
 
--[dayShortDateMonthYear (dateString)](#dayShortDDMMYYYY)
+-[formatShortDayNameDMY(dateString)](#formatShortDayNameDMY)
 ```javascript
-dayShortDateMonthYear("Monday, 22 February 2021")
+formatShortDayNameDMY("Monday, 22 February 2021")
 ```
-- [dayLongDateMonthYear (dateString)](#dayLongDDMMYYYY)
+- [formatFullDayNameDMY (dateString)](#formatFullDayNameDMY)
 ```javascript
-dayLongDateMonthYear ("Monday, 22 February 2021")
+formatFullDayNameDMY("Monday, 22 February 2021")
 ```
-- [dayShortDateMonthYear_HH_MM_24 (dateString)](#dayShortDDMMYYYY_HH_MM_24)
+- [formatShortDayNameDMYHM24 (dateString)](#formatShortDayNameDMYHM24)
 ```javascript
- dayShortDateMonthYear_HH_MM_24 ("Monday, 22 February 2021 12:10 PM")
+ formatShortDayNameDMYHM24("Monday, 22 February 2021 12:10 PM")
 ```
-- [dayLongDateMonthYear_HH_MM_24 (dateString)](#dayLongDDMMYYYY_HH_MM_24)
-- [dayShorDateMonthYear_HH_MM_12 (dateString)](#dayShortDDMMYYYY_HH_MM_12)
-- [dayLongDateMonthYear_HH_MM_12 (dateString)](#dayLongDDMMYYYY_HH_MM_12)
-- [yearMonthShortDate (dateString)](#yearMonthShortDate)
-- [dateMonthShortYear (dateString)](#dateMonthShortYear)
-- [monthShortDateYear (dateString)](#monthShortDateYear)
-- [dateMonthYear (dateString)](#dateMonthYear)
-- [monthDateYear (dateString)](#monthDateYear)
-- [yearMonthDate (dateString)](#yearMonthDate)
-- [monthLongDateYear (dateString)](#monthLongDateYear)
-- [yearMonthLongDate (dateString)](#yearMonthLongDate)
-- [dateMonthLongYear (dateString)](#dateMonthLongYear)
-- [mDYear (dateString)](#mDYear)
-- [yearMD (dateString)](#yearMD)
-- [dMYear (dateString)](#dMYear)
-- [yearMDate (dateString)](#yearMDate)
-- [mDateYear (dateString)](#mDateYear)
-- [DateMYear (dateString)](#DateMYear)
-- [monthDateYear_noSep (dateString)](#monthDateYear_noSep)
-- [dateMonthYear_noSep (dateString)](#dateMonthYear_noSep)
-- [yearMonthDate_noSep (dateString)](#yearMonthDate_noSep)
+- [formatFullDayNameDMYHM24 (dateString)](#formatFullDayNameDMYHM24)
+- [formatShortDayNameDMYHM12 (dateString)](#formatShortDayNameDMYHM12)
+- [formatFullDayNameDMYHM12(dateString)](#formatFullDayNameDMYHM12)
+- [formatShortMonthYMD (dateString)](#formatShortMonthYMD)
+- [formatShortMonthDMY (dateString)](#formatShortMonthDMY)
+- [formatShortMonthMDY (dateString)](#formatShortMonthMDY)
+- [formatHypenDMY (dateString)](#formatHypenDMY)
+- [formatHyphenMDY (dateString)](#formatHyphenMDY)
+- [formatHypenYMD (dateString)](#formatHypenYMD)
+- [formatLongMonthMDY (dateString)](#formatLongMonthMDY)
+- [formatLongMonthYMD (dateString)](#formatLongMonthYMD)
+- [formatLongMonthDMY (dateString)](#formatLongMonthDMY)
 - [timeSince (dateString)](#timeSince)
-- [yearMonthDate_s (dateString)](#yearMonthDate_s)
-- [dateMonthYear_s (dateString)](#dayShortDDMMYYYY)
-- [monthDateYear_s (dateString)](#monthDateYear_s)
-- [yearMonthShortDate_s (dateString)](#yearMonthShortDate_s)
-- [dateMonthShortYear_s (dateString)](#dateMonthShortYear_s)
-- [monthShortDateYear_s (dateString)](#monthShortDateYear_s)
-- [yearMonthLongtDate_s (dateString)](#yearMonthLongtDate_s)
-- [dateMonthLongYear_s (dateString)](#dateMonthLongYear_s)
-- [monthLongDateYear_s (dateString)](#monthLongDateYear_s)
-- [yearMonthDate_d (dateString)](#yearMonthDate_d)
-- [dateMonthYear_d (dateString)](#dateMonthYear_d)
-- [monthDateYear_d (dateString)](#monthDateYear_d)
-- [yearMonthShortDate_d (dateString)](#yearMonthShortDate_d)
-- [dateMonthShortYear_d (dateString)](#dateMonthShortYear_d)
-- [monthShortDateYear_d (dateString)](#monthShortDateYear_d)
-- [yearMonthLongtDate_d (dateString)](#yearMonthLongtDate_d)
-- [dateMonthLongYear_d (dateString)](#dateMonthLongYear_d)
-- [monthLongDateYear_d](#monthLongDateYear_d)
-- [dateOfMonthShortYear (dateString)](#dateOfMonthShortYear)
-- [theDateOfMontShorthYear (dateString)](#theDateOfMontShorthYear)
-- [dateMontShortYear_noSeprate (dateString)](#dateMontShortYear_noSeprate)
-- [dateMontShortYearShort (dateString)](#dateMontShortYearShort)
-- [yearShortMonthShortDate (dateString)](#yearShortMonthShortDate)
-- [MonthShortDateYearShort (dateString)](#MonthShortDateYearShort)
-- [dateMontShortYearShort_noSep (dateString)](#dateMontShortYearShort_noSep)
-- [yearShortMonthShortDate_noSep (dateString)](#yearShortMonthShortDate_noSep)
-- [MonthShortDateYearShort_noSep (dateString)](#MonthShortDateYearShort_noSep)
-- [dateMontShortYearShort_s (dateString)](#dateMontShortYearShort_s)
-- [yearShortMonthShortDate_s (dateString)](#yearShortMonthShortDate_s)
-- [MonthShortDateYearShort_s (dateString)](#MonthShortDateYearShort_s)
-- [dateMontShortYearShort_d (dateString)](#dateMontShortYearShort_d)
-- [yearShortMonthShortDate_d (dateString)](#yearShortMonthShortDate_d)
-- [MonthShortDateYearShort_d (dateString)](#MonthShortDateYearShort_d)
-- [dayMonthYear_HH_MM_24 (dateString)](#dayMonthYear_HH_MM_24)
-- [dayMonthYear_HH_MM_12 (dateString)](#dayMonthYear_HH_MM_12)
-
+- [formatSlashYMD (dateString)](#formatSlashYMD)
+- [formatSlashDMY (dateString)](#formatSlashDMY)
+- [formatSlashMDY (dateString)](#formatSlashMDY)
+- [formatSlashShortMonthYMD (dateString)](#formatSlashShortMonthYMD)
+- [formatSlashShortMonthDMY (dateString)](#formatSlashShortMonthDMY)
+- [formatSlashShortMonthMDY (dateString)](#formatSlashShortMonthMDY)
+- [formatSlashLongMonthYMD (dateString)](#formatSlashLongMonthYMD)
+- [formatSlashLongMonthDMY (dateString)](#formatSlashLongMonthDMY)
+- [formatSlashLongMonthMDY (dateString)](#formatSlashLongMonthMDY)
+- [formatDotYMD (dateString)](#formatDotYMD)
+- [formatDotDMY (dateString)](#formatDotDMY)
+- [formatDotMDY (dateString)](#formatDotMDY)
+- [formatShortMonthDMYHM24(dateString)](#formatShortMonthDMYHM24)
+- [formatShortMonthMDYHM12 (dateString)](#formatShortMonthMDYHM12)
+- [ formatYMDHMS24(dateString)](formatYDMHMS24)
+- [formatDotShortMonthYMD (dateString)](#formatDotShortMonthYMD)
+- [formatDotShortMonthDMY (dateString)](#formatDotShortMonthDMY)
+- [formatDotShortMonthMDY (dateString)](#formatDotShortMonthMDY)
+- [formatDotFullMonthYMD (dateString)](#formatDotFullMonthYMD)
+- [formatDotFullMonthDMY (dateString)](#formatDotFullMonthDMY)
+- [formatDotFullMonthMDY](#formatDotFullMonthMDY)
+- [formatShortMonthYearDMY (dateString)](#formatShortMonthYearDMY)
+- [formatShortMonthYearYMD(dateString)](#formatShortMonthYearYMD)
+- [formatShortMonthYearMDY (dateString)](#formatShortMonthYearMDY)
+- [formatSlashShortMonthYearDMY (dateString)](#formatSlashShortMonthYearDMY)
+- [formatSlashShortMonthYearYMD (dateString)](#formatSlashShortMonthYearYMD)
+- [formatSlashShortMonthYearMDY (dateString)](#formatSlashShortMonthYearMDY)
+- [formatDotShortMonthYearDMY (dateString)](#formatDotShortMonthYearDMY)
+- [formatDotShortMonthYearYMD (dateString)](#formatDotShortMonthYearYMD)
+- [formatDotShortMonthYearMDY (dateString)](#formatDotShortMonthYearMDY)
+- [getIstTime(offset)](#getIstTime)
+- [setExpireTime(minute)](#setExpireTime)
+- [getNextDate(day)](#getNextDate)
+- [setExpireTime(minute)](#setExpireTime)
 
 # field-validator
 - [isEmpty](#is-empty)
@@ -238,6 +255,7 @@ dayLongDateMonthYear ("Monday, 22 February 2021")
 - [isNumber](#is-number)
 - [isJSON](#is-JSON)
 - [isSameType](#is-same-type)
+- [checkValidUsername(username)](#check-valid-username)
 
 ## is-empty
 ```javascript
@@ -320,6 +338,10 @@ isJSON(value);
 ## is-same-type
 ```javascript
 isSameType(val1, val2);
+```
+## check-valid-username
+```javascript
+checkValidUsername(username)
 ```
 # numerical-calculator
 -[percentage (output,input)](#percentage)
