@@ -1,8 +1,8 @@
 {
   "_from": "maksof-common",
-  "_id": "maksof-common@0.0.15",
+  "_id": "maksof-common@0.0.26",
   "_inBundle": false,
-  "_integrity": "sha512-kgxHYbF+0KBrePvCm5EmCQ/j1TW4xgS3J1az8Uq2J6ifmBddHtBMc+kc7Jc+QE9pNgrQDrjZXKLrECm3UkHkBw==",
+  "_integrity": "sha512-MT3zMDnrbLZEQz6sg/TZgvv0m8vnPTgnAXwo0I3SFLK0jHfKntvX+k8P210oPAKTIpCtnFvzqLqF4zpO8Gd3yw==",
   "_location": "/maksof-common",
   "_phantomChildren": {},
   "_requested": {
@@ -19,10 +19,10 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/maksof-common/-/maksof-common-0.0.15.tgz",
-  "_shasum": "67a8e3f5d8002d6e61780111ccb64db0413b56d9",
+  "_resolved": "https://registry.npmjs.org/maksof-common/-/maksof-common-0.0.26.tgz",
+  "_shasum": "2d207690f5596cae44cf5762a606b5136a6796ee",
   "_spec": "maksof-common",
-  "_where": "C:\\www\\maksof-common\\New folder",
+  "_where": "C:\\www\\test",
   "author": "",
   "bugs": {
     "url": "https://github.com/maksof/maksof-common/issues"
@@ -47,5 +47,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.24"
+  "version": "0.0.27"
 }

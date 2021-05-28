@@ -1,6 +1,6 @@
 module.exports= {
     isEmpty(tempString){
-        var output=(tempString == "" && tempString == undefined && tempString == null && tempString.search(/^\s+$/)==0)? true : false
+        var output=(tempString == ""&& tempString == undefined && tempString == null && tempString.match(/^\s+$/)==0)? true : false
         return output;
     },
     isPhoneNumber(tempString){
